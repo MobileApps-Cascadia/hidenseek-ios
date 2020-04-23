@@ -1,0 +1,60 @@
+GamePlay Documentation
+
+Game Play for HideNSeek, a location based version of the traditional game
+
+ In a traditional game of Hide and Seek, there are at least 2 players one player is the seeker and the other player/s are the hiders. In the traditional game of Hide and Seek, there is one player who takes on the seeker role and the rest of the players are the hiders. The seeker closes their eyes and counts to a predetermined number during that time the hiders go and stash themselves out of sight of the seeker. When the seeker is done counting, they go and look for the hiders. When the seeker finds a hider, that hider is out of the game. The game ends when all of the hiders are found by the seeker. 
+
+ In this version of HideNSeek, the seeker chooses to host a match of HideNSeek from the options in the app. The seeker can then choose the amount of time the hiders have to hide. The seeker can also choose the amount of time they have to search for the hiders.The rest of the players are the hiders who can choose to join the match that was created by the host. When the Match begins, there will be a timer that represents the count time, the amount of time the hiders have to hide from the seeker. When the count time ends, the search time begins during which the seeker’s mission is to find the location of all of the hiders, by only being given clues of hot or cold if they are near the hiders. The location of the players is represented by the gps coordinates of each player.  
+
+Goal: The goal of HideNSeek is for the Seeker to find all of the Hiders in the alloted Search time, or if you are a Hider, the goal is to not be “found” by the Seeker in the alloted Search* time.
+
+
+Seeker:
+ In this version of HideNSeek, the Seeker chooses the Host Match option of HideNSeek from the main screen in the app. The seeker then chooses to add a new match and enters a Match Name and Match Password to be used for the other players to use to Join this match. The seeker then enters the Count Time, and the Search Time and chooses HideNSeek from the list of types of Matches. 
+
+When the Seeker chooses to Begin Match, the Count Time will be visible on a timer. When the count time ends, the Search Time begins and the seeker will be shown only the list of players with a Hot or Cold tag next to each player name. When the seeker has found a player, they will click on the player’s name and select the found option. If the Seeker finds all players during the search time, they are declared the Game Master. 
+
+Hider:
+The rest of the players are the hiders and can join the match that was created by the host by choosing Join Match and then selecting the Match Name from the list of matches. The Hider enters the password and selects Join Match. 
+
+When the match begins, the Count Time will be visible on a timer. When the count time ends, the Search Time begins and a map of the vicinity will be shown to the hiders with the seeker’s location as well as all other players. 
+
+If a hider’s status has changed to found, their location will no longer be visible on the map and the location of the seeker. If the hider is not found during the Search Time, they are declared a winner or the Game Master if the sole winner. If there is more than 1 winner, the hider that is the furthest from the Seeker is declared the Game Master.
+
+
+Definitions:
+
+Begin Match - The point where the Count Time has started. 
+
+Cold - The clue, blue in color, for the Seeker that the player is not in close proximity to them.
+
+Count Time - The time in seconds for the Hiders to hide before the Search Time begins. 
+
+Found - The Hider has confirmed that the Seeker has located the Hider by their GPS coordinates and the game has ended for that particular Hider. 
+
+Game Master - The player that can choose who will be the Seeker in the next Match.
+
+Hider - A player who during the Count Time conceals themselves from the Seeker and during Search time stays hidden.
+
+Hot - The clue red in color, for the Seeker that they are in close proximity to a hider.
+
+Match End - The time when the Search time runs out or all of the Hiders have been found. 
+
+Match Host - The player that chooses to be the creator of the Match and also takes on the role of the Seeker.
+
+Match Name - The name given to a newly created Match chosen by the host.
+
+Match Password - The password chosen by the Host to be the word that other players will need to be able to join the Match.
+
+Search Time -  The time in minutes for the Seeker to find the players.
+
+Seeker - The Match Host, and who will close their eyes during the Count Time and search for the Hiders in the alloted Search Time. 
+
+
+
+
+
+
+
+
+
