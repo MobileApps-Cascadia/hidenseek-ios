@@ -17,6 +17,7 @@
 		A8E6A206244103B500889AAD /* hidenseekTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6A205244103B500889AAD /* hidenseekTests.swift */; };
 		A8E6A211244103B500889AAD /* hidenseekUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6A210244103B500889AAD /* hidenseekUITests.swift */; };
 		A8E6A2232452319A00889AAD /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6A2222452319900889AAD /* SignupViewController.swift */; };
+		A8E6A2252452550500889AAD /* HostJoinMatchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8E6A2242452550500889AAD /* HostJoinMatchStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		A8E6A210244103B500889AAD /* hidenseekUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hidenseekUITests.swift; sourceTree = "<group>"; };
 		A8E6A212244103B500889AAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8E6A2222452319900889AAD /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		A8E6A2242452550500889AAD /* HostJoinMatchStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HostJoinMatchStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		A8E6A2212452314200889AAD /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				A8E6A2242452550500889AAD /* HostJoinMatchStoryboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8E6A1FB244103B500889AAD /* LaunchScreen.storyboard in Resources */,
+				A8E6A2252452550500889AAD /* HostJoinMatchStoryboard.storyboard in Resources */,
 				A8E6A1F8244103B500889AAD /* Assets.xcassets in Resources */,
 				A8E6A1F3244103B000889AAD /* Main.storyboard in Resources */,
 			);

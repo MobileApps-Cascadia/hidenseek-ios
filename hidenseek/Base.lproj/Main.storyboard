@@ -32,6 +32,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="jRx-D3-SMv" kind="show" id="sSq-ZW-fvL"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0K-9k-iCz">
                                 <rect key="frame" x="77" y="424" width="233" height="34"/>
@@ -78,6 +81,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="137.94642857142856"/>
+        </scene>
+        <!--hostJoinMatchViewController-->
+        <scene sceneID="BeV-Um-Uxt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HostJoinMatchStoryboard" referencedIdentifier="hostJoinMatchViewController" id="jRx-D3-SMv" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Ubl-hK-ehm"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xic-HX-slA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1901" y="562"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="5lb-BY-1Lt">
