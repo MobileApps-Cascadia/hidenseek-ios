@@ -16,6 +16,9 @@
 		A8E6A1FB244103B500889AAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8E6A1F9244103B500889AAD /* LaunchScreen.storyboard */; };
 		A8E6A206244103B500889AAD /* hidenseekTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6A205244103B500889AAD /* hidenseekTests.swift */; };
 		A8E6A211244103B500889AAD /* hidenseekUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6A210244103B500889AAD /* hidenseekUITests.swift */; };
+		A8E6A2232452319A00889AAD /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6A2222452319900889AAD /* SignupViewController.swift */; };
+		A8E6A2252452550500889AAD /* HostJoinMatchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8E6A2242452550500889AAD /* HostJoinMatchStoryboard.storyboard */; };
+		A8E6A2272458B91100889AAD /* MatchesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8E6A2262458B91000889AAD /* MatchesStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		A8E6A20C244103B500889AAD /* hidenseekUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hidenseekUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8E6A210244103B500889AAD /* hidenseekUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hidenseekUITests.swift; sourceTree = "<group>"; };
 		A8E6A212244103B500889AAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8E6A2222452319900889AAD /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		A8E6A2242452550500889AAD /* HostJoinMatchStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HostJoinMatchStoryboard.storyboard; sourceTree = "<group>"; };
+		A8E6A2262458B91000889AAD /* MatchesStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MatchesStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,9 @@
 		A8E6A1EA244103B000889AAD /* hidenseek */ = {
 			isa = PBXGroup;
 			children = (
+				A8E6A2212452314200889AAD /* Storyboards */,
+				A8E6A2202452311800889AAD /* Models */,
+				A8E6A21F245230F500889AAD /* ViewControllers */,
 				A8E6A1EB244103B000889AAD /* AppDelegate.swift */,
 				A8E6A1ED244103B000889AAD /* SceneDelegate.swift */,
 				A8E6A1EF244103B000889AAD /* ViewController.swift */,
@@ -129,6 +138,30 @@
 				A8E6A212244103B500889AAD /* Info.plist */,
 			);
 			path = hidenseekUITests;
+			sourceTree = "<group>";
+		};
+		A8E6A21F245230F500889AAD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A8E6A2222452319900889AAD /* SignupViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A8E6A2202452311800889AAD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A8E6A2212452314200889AAD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A8E6A2242452550500889AAD /* HostJoinMatchStoryboard.storyboard */,
+				A8E6A2262458B91000889AAD /* MatchesStoryboard.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8E6A1FB244103B500889AAD /* LaunchScreen.storyboard in Resources */,
+				A8E6A2252452550500889AAD /* HostJoinMatchStoryboard.storyboard in Resources */,
 				A8E6A1F8244103B500889AAD /* Assets.xcassets in Resources */,
+				A8E6A2272458B91100889AAD /* MatchesStoryboard.storyboard in Resources */,
 				A8E6A1F3244103B000889AAD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +299,7 @@
 			files = (
 				A8E6A1F0244103B000889AAD /* ViewController.swift in Sources */,
 				A8E6A1EC244103B000889AAD /* AppDelegate.swift in Sources */,
+				A8E6A2232452319A00889AAD /* SignupViewController.swift in Sources */,
 				A8E6A1F6244103B000889AAD /* hidenseek.xcdatamodeld in Sources */,
 				A8E6A1EE244103B000889AAD /* SceneDelegate.swift in Sources */,
 			);
