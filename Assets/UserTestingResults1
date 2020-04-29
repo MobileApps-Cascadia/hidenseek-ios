@@ -1,0 +1,44 @@
+HideNSeek User Testing Results 1
+
+Method: 
+The user was given a link to access the Figma prototype. Through a Zoom meeting, the user was told about the basics of the game, so they could understand the minimal information needed to make decisions in navigating the app. The user was given a use case and told to navigate the app based on what they intuitively thought they would do. The user was asked to give their thoughts aloud as they made decisions and any other input they wanted. I was able to see the users physically navigate the Figma prototype. The results for the user testing is discussed below for each use case and the recommendations from the users. 
+
+ SignUp Use Case: A user who does not have an account
+The users were able to have a clear understanding  of the login page and the fields that were required in order to login. The users were able to navigate to the signup page and narrate how they would input the required fields to create an account.
+
+Login Use Case: A user who does have an account
+The users were able to have a clear understanding of the login page and the fields that were required in order to login. The users were able to narrate how they would input the required fields to login.
+
+Logged in user Host Match Use Case: A logged in user who wants to host a match
+The users were able to navigate to the Matches tableView from the main screen by selecting the Host Match button. The users were able to identify the add icon and know that its purpose was to create a match. The users were able to navigate to a create match screen. The MatchName text field was filled in for them, but because it did not have a match name label for it, they were confused as to what it meant. The users were able to identify the other text fields and narrate what they do. The users were able to select the host match button to navigate back to the Matches tableView and identify their created match. The users were able to also identify what the icons were in the bottom navigation bar. 
+
+Logged in user Join a match Use Case: A logged in user who wants to Join a match
+The users were able to navigate to the Matches tableView from the main screen by selecting the Join Match button. The users were able to identify the match that was created in the tableView and know that they were to select that match to join the game. The users were navigated to the MatchDetail screen and they were able to identify the details of the game. They were confused when they saw the count and search time as text fields instead of labels of the defined times. The users were able to identify the meaning of the players list and selected the begin match button to be navigated to the count time screen. The users were able to also identify what the icons were in the bottom navigation bar. 
+
+Leave Match Game Use Case: A user who wants to leave the match 
+The users were able to identify the leave match button and select it to exit the game. 
+
+
+User Recommendations:
+Users would like to have control over the parameters of the area the match takes place in. Example: a player should not be allowed to get in a car and drive down the street if the match is to be played in the backyard, or they are out of bounds.
+Want to be able to call out the players who go outside the bounds of the game.
+Max users should be 10, enough for players to play at parties.
+Want to have all of the players including the seeker visible to the hiders. 
+Want a profile picture to identify them on the map
+Match notifications for active matches
+Ability to have Rounds and a scoreboard for those rounds. 
+Ready up feature that shows when all of the players are ready to start the game. 
+Getting 3 chances to be able to see the seeker’s location during the game otherwise the seeker’s location is hidden. 
+ Want a text field for how many players for the host match use case.
+Have a friends list to choose from 
+
+
+
+
+
+
+
+
+
+
+
