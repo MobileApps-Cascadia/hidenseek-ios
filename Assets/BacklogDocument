@@ -1,0 +1,113 @@
+HideNSeek Backlog
+
+Feature 1. Login/Signup Account Registration
+A user shall be able to sign up for a HideNSeek account, The registration process shall require email, password and username. The username will be used for identification in the list of players in the game. 
+	1.1 Login  
+The user shall be able to enter their email and Name in the text fields 
+		1.1.1  Login UI
+
+		1.1.2  Login functionality 
+
+	1.2 SignUp 
+	The user shall be able to enter their email and Name in the text fields 
+
+		1.2.1 SignUp UI 
+
+		1.2.2 Signup functionality 
+
+Feature 2. Host Match 
+A user shall be able to choose to host a match. The user shall be able to create a match if they are hosting a match.
+
+	2.1 Main Screen Host/Join Match 
+The user shall be able to click on the Host match or Join Match button 
+
+		2.1.1 Main Screen Host/Join Match UI
+
+		2.1.2 Main Screen Host/Join Match functionality 
+
+
+	2.2 TableView for Matches 
+	The user will be able to click on the add button to create a new match if they are a host/seeker or click on the available match they want to join if they are a hider. 
+
+		2.2.1 TableView for Matches UI
+The user shall be able to view the tableView and click on the add icon
+
+
+		2.2.2 Functionality for the TableView for Matches 
+
+	2.3 Create Match
+	The user shall be able to create a match if they are a seeker/host by filling in the textfields with the info that would create a match. 
+
+		2.3.1 Create Match UI 
+	There will be a Screen for creating a match with text fields for and a button for creating a match. 
+		2.3.2  Functionality for Create Match HostMatch
+
+
+Feature 3. Join Match 
+A user shall be able to choose to join a match. The user shall be able to be able to select the match they want to join. 
+
+
+ Feature 4. BeginMatch/MatchDetail
+The user shall be able to begin the match by selecting the match they want to begin in the tableview and selecting the begin match button on the Match Detail screen.
+
+	4.1 BeginMatch/MatchDetail UI 
+ There will be a Screen for viewing the match details and a button to begin the match. 
+
+	4.2 Functionality for BeginMatch 
+
+ Feature 5. MatchPlay with Map and GPS coordinates
+The user shall be able to play a match that when the Match begins, there will be a timer that represents the count time, the amount of time the hiders have to hide from the seeker. When the count time ends, the search time begins during which the seeker’s mission is to find the location of all of the hiders, by only being given clues of hot or cold if they are near the hiders. The location of the players is represented by the gps coordinates of each player.  
+
+ 	5.1 The Count time timer 
+
+ 	5.2 The Search time timer
+
+ 	5.3 The map 
+	
+ 	5.4 The gps coordinates
+
+ 	5.5 The hot and cold clues 
+
+ Feature 6. End Match 
+The user shall be able to end the match that they are playing. 
+
+	6.1 The functionality for the end of the game
+
+ Feature 7. Menu 
+The user shall be able to select the menu icon and choose from the list the screen they wish to navigate to. 
+
+	7.1 The menu icon in the navigation bar
+
+	7.2 The Menu UI 
+
+	7.3 The functionality for the Menu
+
+ Feature 8. GamePlay info
+The user shall be able to read the directions of the game including the definitions for roles and terms of the game. 
+
+	8.1  GamePlay document 
+	A document describing the game play will be created. 
+
+	8.2 GamePlay UI 
+
+	8.3  Functionality for GamePlay
+
+Feature 9. Local storage 
+The user shall be able to have their Match information stored locally.
+
+	9.1 User model 
+
+	9.2 Match model 
+
+	9.3 Local core data storage 
+
+Feature 10. Api server storage 
+The user shall be able to have their Match information stored on a server.
+
+	10.1 Api documentation 
+
+	10.2 Server 
+
+
+
+
