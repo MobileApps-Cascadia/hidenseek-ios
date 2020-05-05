@@ -4,9 +4,9 @@ Game Play for HideNSeek, a location based version of the traditional game
 
  In a traditional game of Hide and Seek, there are at least 2 players one player is the seeker and the other player/s are the hiders. In the traditional game of Hide and Seek, there is one player who takes on the seeker role and the rest of the players are the hiders. The seeker closes their eyes and counts to a predetermined number during that time the hiders go and stash themselves out of sight of the seeker. When the seeker is done counting, they go and look for the hiders. When the seeker finds a hider, that hider is out of the game. The game ends when all of the hiders are found by the seeker. 
 
- In this version of HideNSeek, the seeker chooses to host a match of HideNSeek from the options in the app. The seeker can then choose the amount of time the hiders have to hide. The seeker can also choose the amount of time they have to search for the hiders.The rest of the players are the hiders who can choose to join the match that was created by the host. When the Match begins, there will be a timer that represents the count time, the amount of time the hiders have to hide from the seeker. When the count time ends, the search time begins during which the seeker’s mission is to find the location of all of the hiders, by only being given clues of hot or cold if they are near the hiders. The location of the players is represented by the gps coordinates of each player.  
+ In this version of HideNSeek, the seeker chooses to host a match of HideNSeek from the options in the app. The seeker can then choose the amount of time the hiders have to hide. The seeker can also choose the amount of time they have to search for the hiders.The rest of the players are the hiders who can choose to join the match that was created by the host. When the Match begins, there will be a timer that represents the count time, the amount of time the hiders have to hide from the seeker. When the count time ends, the search time begins during which the seeker’s mission is to find the location of all of the hiders, by only being given clues of hot or cold if they are near the hiders. The location of the players is represented by the GPS coordinates of each player.  
 
-Goal: The goal of HideNSeek is for the Seeker to find all of the Hiders in the alloted Search time, or if you are a Hider, the goal is to not be “found” by the Seeker in the alloted Search* time.
+Goal: The goal of HideNSeek is for the Seeker to find all of the Hiders in the allotted Search time, or if you are a Hider, the goal is to not be “found” by the Seeker in the allotted Search* time.
 
 
 Seeker:
@@ -48,7 +48,7 @@ Match Password - The password chosen by the Host to be the word that other playe
 
 Search Time -  The time in minutes for the Seeker to find the players.
 
-Seeker - The Match Host, and who will close their eyes during the Count Time and search for the Hiders in the alloted Search Time. 
+Seeker - The Match Host, and who will close their eyes during the Count Time and search for the Hiders in the allotted Search Time. 
 
 
 
