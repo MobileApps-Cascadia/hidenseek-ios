@@ -35,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="-107" y="119"/>
         </scene>
-        <!--Create Matches View Controller-->
+        <!--Create Match View Controller-->
         <scene sceneID="7BH-Ma-FtZ">
             <objects>
-                <viewController id="U2N-ws-V0p" customClass="CreateMatchesViewController" customModule="hidenseek" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="U2N-ws-V0p" customClass="CreateMatchViewController" customModule="hidenseek" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u6n-24-Wed">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

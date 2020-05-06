@@ -1,5 +1,5 @@
 //
-//  CreateMatchesViewController.swift
+//  CreateMatchViewController.swift
 //  hidenseek
 //
 //  Created by juanita aguilar on 5/6/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateMatchesViewController: UIViewController {
+class CreateMatchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
