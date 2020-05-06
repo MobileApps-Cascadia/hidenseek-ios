@@ -20,7 +20,7 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
       self.navigationItem.rightBarButtonItem =  UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(createMatch))
         
-        self.navigationItem.title = "Matches"
+          self.navigationItem.title = "Matches"
     }
 
     
