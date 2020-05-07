@@ -43,8 +43,6 @@ class CreateMatchViewController: UIViewController {
     func createMatchTypePicker(){
         let typePicker = UIPickerView()
         typePicker.delegate = self
-      //  typePicker.dataSource = self
-       // typePicker.sizeToFit()
         //set the popup view
         MatchTypeTextField.inputView = typePicker
     }
@@ -94,15 +92,6 @@ extension CreateMatchViewController: UIPickerViewDelegate, UIPickerViewDataSourc
 
          func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
             if pickerView == countTimePickerView{
-          /* switch component {
-             case 0:
-                return 25
-                 //case 1 and 2 are min and sec
-             case 1://, 2:
-                 return 60
-             default:
-                 return 0
-             }*/
               return 60
               
             }else if pickerView == SearchTimePickerView {
@@ -120,7 +109,7 @@ extension CreateMatchViewController: UIPickerViewDelegate, UIPickerViewDataSourc
 
          func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
              if pickerView == countTimePickerView || pickerView == SearchTimePickerView {
-             return pickerView.frame.size.width/3
+             return pickerView.frame.size.width/2
             }
               return pickerView.frame.size.width
          }
@@ -129,10 +118,8 @@ extension CreateMatchViewController: UIPickerViewDelegate, UIPickerViewDataSourc
             if pickerView == countTimePickerView {
             switch component {
              case 0:
-                 return "\(row) Min"//Hour"
+                 return "\(row) Min"
              case 1:
-                 return "\(row) Sec"//Min"
-             case 2:
                  return "\(row) Sec"
              default:
                  return ""
@@ -143,26 +130,34 @@ extension CreateMatchViewController: UIPickerViewDelegate, UIPickerViewDataSourc
                     return "\(row) Hour"
                 case 1:
                     return "\(row) Min"
-                case 2:
-                    return "\(row) Sec"
                 default:
                     return ""
                 }
           }
             return type[row]
          }
+    
          func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-            if pickerView == countTimePickerView || pickerView == SearchTimePickerView {
+            if pickerView == countTimePickerView {
             switch component {
-             case 0:
-                 hour = row
-             case 1:
-                 minutes = row
-             case 2:
-                 seconds = row
-             default:
-                 break;
+            case 0:
+                  minutes = row
+            case 1:
+                seconds  = row
+            // case 2:
+             //    seconds = row
+            default:
+                break;
              }
+            } else if pickerView == SearchTimePickerView {
+                switch component {
+                case 0:
+                    hour = row
+                case 1:
+                    minutes = row
+                default:
+                    break;
+            }
             }else{
             matchType = type[row]
             MatchTypeTextField.text = matchType
