@@ -1,4 +1,4 @@
-//
+//This class will allow the user to create a new match by filling in the fields and selecting the desired time using the UIPickeViews. This class will have
 //  CreateMatchViewController.swift
 //  hidenseek
 //
@@ -28,7 +28,7 @@ class CreateMatchViewController: UIViewController {
     @IBOutlet weak var SearchTimePickerView: UIPickerView!
     
     @IBOutlet weak var MatchTypeTextField: UITextField!
-    let type = ["HideNSeek","Sandbox"]
+    let type = ["HideNSeek"]
     let countTime = ["Min", "Sec"]
     let searchTime = ["Hour", "Min"]
     
@@ -39,14 +39,19 @@ class CreateMatchViewController: UIViewController {
     var seconds: Int = 0
     var matchType: String?
     
-   //creating a pickerView for the matchtypetextfield
+    //Purpose: To create a pickerView for the MatchTypeTextField
+    //Precondition: None
+    //Postcondtion: A pickerView for the matchtypetextfield will be created for the user to select the matchType
     func createMatchTypePicker(){
         let typePicker = UIPickerView()
         typePicker.delegate = self
-        //set the popup view
+        //sets the popup view to a UIPickerView
         MatchTypeTextField.inputView = typePicker
     }
-//creating a toolbar for the createMatchtypPicker
+
+    //Purpose: To create a toolbar for the createMatchTypePicker
+    //Precondition: The user clicks on the MatchTypeTextField
+    //Postcondtion: a toolbar for the createMatchTypePicker with a done button will be created
     func createToolBar(){
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -57,7 +62,10 @@ class CreateMatchViewController: UIViewController {
         MatchTypeTextField.inputAccessoryView = toolbar
     }
     
-    //after editing or selection dismiss the UIPickerView
+    
+    //Purpose: To dismiss the UIPickerView
+    //Precondition: The user clicks the done icon
+    //Postcondtion: Will dismiss the UIPickerView after editing or selection
     @objc func dismissKeyboard(){
         view.endEditing(true)
     }
@@ -71,7 +79,7 @@ class CreateMatchViewController: UIViewController {
     }
     */
   //Purpose: To show the user an alert if they want to cancel
-  //Precondition: The User clicks the canel icon
+  //Precondition: The user clicks the canel icon
   //Postcondtion: Will present the user with an alert
   @objc func cancelMatch() {
     
@@ -82,40 +90,51 @@ class CreateMatchViewController: UIViewController {
 //Extension for the UIPicker delegate and Datasource with the function for them
 extension CreateMatchViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 
-
-         func numberOfComponents(in pickerView: UIPickerView) -> Int {
-            if pickerView == countTimePickerView || pickerView == SearchTimePickerView{
-                return 2
-            }
-            return 1
+    //Purpose:
+    //Precondition:
+    //Postcondtion:
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        if pickerView == countTimePickerView || pickerView == SearchTimePickerView{
+            return 2
         }
-
-         func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-            if pickerView == countTimePickerView{
-              return 60
+            return 1
+    }
+    
+    //Purpose:
+    //Precondition:
+    //Postcondtion:
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if pickerView == countTimePickerView{
+            return 60
               
-            }else if pickerView == SearchTimePickerView {
-                switch component {
-                case 0:
-                    return 25
-                case 1://, 2:
-                    return 60
-                default:
-                    return 0
-                }
+        }else if pickerView == SearchTimePickerView {
+            switch component {
+            case 0:
+                return 25
+            case 1://, 2:
+                return 60
+            default:
+                return 0
             }
+        }
                return type.count
-         }
-
-         func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
-             if pickerView == countTimePickerView || pickerView == SearchTimePickerView {
+    }
+    
+    //Purpose:
+    //Precondition:
+    //Postcondtion:
+    func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+        if pickerView == countTimePickerView || pickerView == SearchTimePickerView {
              return pickerView.frame.size.width/2
-            }
+        }
               return pickerView.frame.size.width
-         }
-
-         func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-            if pickerView == countTimePickerView {
+    }
+    
+    //Purpose:
+    //Precondition:
+    //Postcondtion:
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView == countTimePickerView {
             switch component {
              case 0:
                  return "\(row) Min"
@@ -124,21 +143,24 @@ extension CreateMatchViewController: UIPickerViewDelegate, UIPickerViewDataSourc
              default:
                  return ""
              }
-            }else if pickerView == SearchTimePickerView {
-                switch component {
-                case 0:
-                    return "\(row) Hour"
-                case 1:
-                    return "\(row) Min"
-                default:
-                    return ""
-                }
-          }
+        }else if pickerView == SearchTimePickerView {
+            switch component {
+            case 0:
+                return "\(row) Hour"
+            case 1:
+                return "\(row) Min"
+            default:
+                return ""
+            }
+        }
             return type[row]
-         }
+    }
     
-         func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-            if pickerView == countTimePickerView {
+    //Purpose:
+    //Precondition:
+    //Postcondtion:
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView == countTimePickerView {
             switch component {
             case 0:
                   minutes = row
@@ -148,19 +170,19 @@ extension CreateMatchViewController: UIPickerViewDelegate, UIPickerViewDataSourc
              //    seconds = row
             default:
                 break;
-             }
-            } else if pickerView == SearchTimePickerView {
-                switch component {
-                case 0:
-                    hour = row
-                case 1:
-                    minutes = row
-                default:
-                    break;
             }
-            }else{
+        }else if pickerView == SearchTimePickerView {
+            switch component {
+            case 0:
+                hour = row
+            case 1:
+                minutes = row
+            default:
+                break;
+            }
+        }else{
             matchType = type[row]
             MatchTypeTextField.text = matchType
-         }
+        }
      }
 }
