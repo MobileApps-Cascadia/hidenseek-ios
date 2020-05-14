@@ -35,13 +35,25 @@ class CreateMatchViewController: UIViewController {
     let countTime = ["Min","Sec"]
     let searchTime = ["Hrs","Min"]
     
-    
-    
     var hour: Int = 0
     var minutes: Int = 0
     var seconds: Int = 0
     var matchType: String?
+   
     
+    //Purpose: To create a match
+    //Precondition: The user click the button for the begin match
+    //Postcondition: A match with the fields filled in will be used to create a Match
+    @IBAction func createMatch(_ sender: Any) {
+        //To Do
+        //Check for empty fields
+        //if empty fields alert
+        //save the fields to prepare for segue to the MatchesTableView
+        print("BEGIN Match button Pressed")
+        
+        
+    }
+
     //Purpose: To create a pickerView for the MatchTypeTextField
     //Precondition: None
     //Postcondtion: A pickerView for the matchtypetextfield will be created for the user to select the matchType
@@ -83,6 +95,7 @@ class CreateMatchViewController: UIViewController {
     @objc func dismissKeyboard(){
         view.endEditing(true)
     }
+    
     /*
     // MARK: - Navigation
 
@@ -92,14 +105,29 @@ class CreateMatchViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
   //Purpose: To show the user an alert if they want to cancel
   //Precondition: The user clicks the canel icon
-  //Postcondtion: Will present the user with an alert
+  //Postcondtion: Will present the user with an alert to cancel match or just dissmiss the alert
   @objc func cancelMatch() {
-    
+    //To Do
+    //if the fields are empty and the user clicks on the cancel to just go back to the Matches tableview, if not and some of the fields are filled and the user clicks on the cancel button, show the alert.
+    let alert = UIAlertController(title: "Cancel Match?", message: "Do you really want to cancel this match?",         preferredStyle: UIAlertController.Style.alert)
+
+    alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: { _ in
+        //Cancel Action
+    }))
+    alert.addAction(UIAlertAction(title: "Delete Match",
+                                  style: UIAlertAction.Style.destructive,
+                                  handler: {(_: UIAlertAction!) in
+                                    //delete match and go back to Matches tableview
+                                    self.performSegue(withIdentifier: "goToMatchesViewController", sender: self)
+    }))
+    self.present(alert, animated: true, completion: nil)
     
     }
 }
+
 
 //Extension for the UIPicker delegate and Datasource with the function for them
 extension CreateMatchViewController: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -137,17 +165,15 @@ extension CreateMatchViewController: UIPickerViewDelegate, UIPickerViewDataSourc
                return type.count
     }
     
-    //Purpose:
+    //Purpose: To set the width of the pickerView
     //Precondition: The delegates for the pickerViews are set
-    //Postcondtion:
+    //Postcondtion: the width of each pickerView will be set
     func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
         if pickerView == countTimePickerView || pickerView == SearchTimePickerView {
-             return pickerView.frame.size.width/2
+            return pickerView.frame.size.width/CGFloat(countTime.count)
         }
               return pickerView.frame.size.width
     }
-    
-    
     
     //Purpose: To get the value the user selected and store it
     //Precondition: The user has selected the row of the column
