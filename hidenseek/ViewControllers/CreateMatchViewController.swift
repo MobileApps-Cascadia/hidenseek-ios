@@ -1,4 +1,5 @@
-//This class will allow the user to create a new match by filling in the fields and selecting the desired time using the UIPickeViews. This class will have
+//This class will allow the user to create a new match by filling in the fields and selecting the desired time using the UIPickeViews. This class will have TextFields for the matchName and matchPassword This class will have two UIPickerViews for the countTime and SearchTime.The countTime pickerView will have minutes and seconds fields and the SearchTime pickerView will have hours and minutes fields. The user will be able to click on the cancel button in the Navigation bar or click on the hostbutton to create the match.
+
 //  CreateMatchViewController.swift
 //  hidenseek
 //
@@ -20,6 +21,7 @@ class CreateMatchViewController: UIViewController {
 
         countTimePickerView.delegate = self
         SearchTimePickerView.delegate = self
+        //SearchTimePickerView.backgroundColor =
         createMatchTypePicker()
         createToolBar()
     }
@@ -28,9 +30,10 @@ class CreateMatchViewController: UIViewController {
     @IBOutlet weak var SearchTimePickerView: UIPickerView!
     
     @IBOutlet weak var MatchTypeTextField: UITextField!
+    //array for the MatchTypePickerView
     let type = ["HideNSeek"]
-    let countTime = ["Min", "Sec"]
-    let searchTime = ["Hour", "Min"]
+    let countTime = ["Min","Sec"]
+    let searchTime = ["Hrs","Min"]
     
     
     
@@ -45,21 +48,32 @@ class CreateMatchViewController: UIViewController {
     func createMatchTypePicker(){
         let typePicker = UIPickerView()
         typePicker.delegate = self
-        //sets the popup view to a UIPickerView
+        //sets the popup view of the textField to a UIPickerView
         MatchTypeTextField.inputView = typePicker
+        typePicker.backgroundColor = .black
+        typePicker.tintColor = UIColor(red:0.949, green:0.537, blue:0.027, alpha:1.0)
+       
     }
 
     //Purpose: To create a toolbar for the createMatchTypePicker
     //Precondition: The user clicks on the MatchTypeTextField
-    //Postcondtion: a toolbar for the createMatchTypePicker with a done button will be created
+    //Postcondtion: a toolbar for the createMatchTypePicker with a done button that will dismiss the picker when the user clicks on it
     func createToolBar(){
         let toolbar = UIToolbar()
+        //fits to the screen
         toolbar.sizeToFit()
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self,  action: #selector(CreateMatchViewController.dismissKeyboard))
+        //sets an array of items on the toolbar
         toolbar.setItems([doneButton], animated: false)
+        //set to true to make it clickable
         toolbar.isUserInteractionEnabled = true
-        //making the uIpickerview has an accessory and that is the toolbar
+        //making the UIPickerview has an accessory view and that is the toolbar
         MatchTypeTextField.inputAccessoryView = toolbar
+        //customizations
+      
+        toolbar.barTintColor = .black
+        //color of buttons for this app
+        toolbar.tintColor = UIColor(red:0.949, green:0.722, blue:0.027, alpha:1.0)
     }
     
     
@@ -90,9 +104,10 @@ class CreateMatchViewController: UIViewController {
 //Extension for the UIPicker delegate and Datasource with the function for them
 extension CreateMatchViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 
-    //Purpose:
-    //Precondition:
-    //Postcondtion:
+    //Purpose: To set the number of columns for the pickerViews
+    //Precondition: The delegates for the pickerViews are set
+    //Postcondtion: Will set the number of columns for the CountTime and SearchTime pickerViews else return one for the Matchtime pickerView
+    //@param UIPickerView @return the number of columns for the pickerView
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         if pickerView == countTimePickerView || pickerView == SearchTimePickerView{
             return 2
@@ -100,9 +115,10 @@ extension CreateMatchViewController: UIPickerViewDelegate, UIPickerViewDataSourc
             return 1
     }
     
-    //Purpose:
-    //Precondition:
-    //Postcondtion:
+    //Purpose: To set the number of rows each column of the PickerView has
+    //Precondition: The delegates for the pickerViews are set
+    //Postcondtion: The number of rows for each of the columns will be set
+    //@param UIPickerView, numberOfRowsInComponent, @return the number of rows each column has
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if pickerView == countTimePickerView{
             return 60
@@ -111,17 +127,18 @@ extension CreateMatchViewController: UIPickerViewDelegate, UIPickerViewDataSourc
             switch component {
             case 0:
                 return 25
-            case 1://, 2:
+            case 1://, 2: if had three columns for hrs,min and sec the rows for min and sec would be the same
                 return 60
             default:
                 return 0
             }
         }
+              //will return the number of rows equal to the number of matchtype array elements
                return type.count
     }
     
     //Purpose:
-    //Precondition:
+    //Precondition: The delegates for the pickerViews are set
     //Postcondtion:
     func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
         if pickerView == countTimePickerView || pickerView == SearchTimePickerView {
@@ -130,35 +147,12 @@ extension CreateMatchViewController: UIPickerViewDelegate, UIPickerViewDataSourc
               return pickerView.frame.size.width
     }
     
-    //Purpose:
-    //Precondition:
-    //Postcondtion:
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView == countTimePickerView {
-            switch component {
-             case 0:
-                 return "\(row) Min"
-             case 1:
-                 return "\(row) Sec"
-             default:
-                 return ""
-             }
-        }else if pickerView == SearchTimePickerView {
-            switch component {
-            case 0:
-                return "\(row) Hour"
-            case 1:
-                return "\(row) Min"
-            default:
-                return ""
-            }
-        }
-            return type[row]
-    }
     
-    //Purpose:
-    //Precondition:
-    //Postcondtion:
+    
+    //Purpose: To get the value the user selected and store it
+    //Precondition: The user has selected the row of the column
+    //Postcondtion: The value of the selected row will be stored
+    //@param UIPickerView, didSelectRow, inComponent
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == countTimePickerView {
             switch component {
@@ -166,8 +160,6 @@ extension CreateMatchViewController: UIPickerViewDelegate, UIPickerViewDataSourc
                   minutes = row
             case 1:
                 seconds  = row
-            // case 2:
-             //    seconds = row
             default:
                 break;
             }
@@ -181,8 +173,89 @@ extension CreateMatchViewController: UIPickerViewDelegate, UIPickerViewDataSourc
                 break;
             }
         }else{
+            //The value of the selected row of the MatchTypePicker will be shown in the MatchTypeTextField
             matchType = type[row]
             MatchTypeTextField.text = matchType
         }
      }
+    
+    //Purpose: To customize the label of each row for the picker views
+     //Precondition:
+     //Postcondtion: The value of the label of each row of each component will be set
+     //@param UIPickerView, viewForRow, forComponent, reusing, @return UIView
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        
+        var label: UILabel
+        if let view = view as? UILabel{
+            label = view
+        }else{
+            label = UILabel()
+        }
+        
+        label.textColor = UIColor(red:0.949, green:0.537, blue:0.027, alpha:1.0)
+        label.textAlignment = .center
+      
+        if pickerView == countTimePickerView {
+            //label.textColor =   UIColor(red:0.051, green:0.051, blue:0.051, alpha:1.0)
+           if row == 0{
+             if component == 0{
+                 label.text = "\(row) \(countTime[0])"
+            }
+            if component == 1{
+                label.text = "\(row) \(countTime[1])"
+            }
+            }else{
+            label.text = "\(row)"
+           }
+            
+        }else if pickerView == SearchTimePickerView {
+            if row == 0{
+              if component == 0{
+                  label.text = "\(row) \(searchTime[0])"
+             }
+             if component == 1{
+                 label.text = "\(row) \(searchTime[1])"
+             }
+             }else{
+             label.text = "\(row)"
+            }
+            
+        }else{
+
+            label.text = type[row]
+        }
+     
+        return label
+        
+    }
+    
+    //Did not need the titleForRow function because wrote a customization for the viewForRow for how the picker rows look
+    //Purpose: To set the title for each row of the columns for each pickerView
+      //Precondition: The delegates for the pickerViews are set
+      //Postcondtion: Sets the title of the row for that column
+      //@param UIPickerView, titleForRow, component, @return the String title for the row
+    /*  func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+          if pickerView == countTimePickerView {
+              switch component {
+               case 0:
+                   return "\(row) Min"
+               case 1:
+                   return "\(row) Sec"
+               default:
+                   return ""
+               }
+          }else if pickerView == SearchTimePickerView {
+              switch component {
+              case 0:
+                  return "\(row) Hour"
+              case 1:
+                  return "\(row) Min"
+              default:
+                  return ""
+              }
+          }
+          //The title will be set to the string of the type array at that position in the array equal to the row
+          return type[row]
+          
+      }*/
 }
