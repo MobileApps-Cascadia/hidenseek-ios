@@ -1,4 +1,4 @@
-//This class will allow the user to create a new match by filling in the fields and selecting the desired time using the UIPickeViews. This class will have TextFields for the matchName and matchPassword This class will have two UIPickerViews for the countTime and SearchTime.The countTime pickerView will have minutes and seconds fields and the SearchTime pickerView will have hours and minutes fields. The user will be able to click on the cancel button in the Navigation bar or click on the hostbutton to create the match.
+//This class will allow the user to create a new match by filling in the fields and selecting the desired time using the UIPickeViews. This class will have TextFields for the matchName and matchPassword This class will have two UIPickerViews for the countTime and SearchTime.The countTime pickerView will have minutes and seconds fields and the SearchTime pickerView will have hours and minutes fields. The user will be able to click on the cancel button in the Navigation bar and an alert will popup or click on the hostbutton to create the match.This class will customize the label of each row for the pickerViews and store the value the user selected in the pickerView.
 
 //  CreateMatchViewController.swift
 //  hidenseek
@@ -21,7 +21,6 @@ class CreateMatchViewController: UIViewController {
 
         countTimePickerView.delegate = self
         SearchTimePickerView.delegate = self
-        //SearchTimePickerView.backgroundColor =
         createMatchTypePicker()
         createToolBar()
     }
@@ -30,7 +29,9 @@ class CreateMatchViewController: UIViewController {
     @IBOutlet weak var SearchTimePickerView: UIPickerView!
     
     @IBOutlet weak var MatchTypeTextField: UITextField!
-    //array for the MatchTypePickerView
+    
+    
+    //arrays for the MatchTypePickerView,countTime and searchTime pickerviews
     let type = ["HideNSeek"]
     let countTime = ["Min","Sec"]
     let searchTime = ["Hrs","Min"]
@@ -49,8 +50,8 @@ class CreateMatchViewController: UIViewController {
         //Check for empty fields
         //if empty fields alert
         //save the fields to prepare for segue to the MatchesTableView
-        print("BEGIN Match button Pressed")
-        
+        //Temp segue
+         self.performSegue(withIdentifier: "goToMatchesViewController", sender: self)
         
     }
 
@@ -81,8 +82,7 @@ class CreateMatchViewController: UIViewController {
         toolbar.isUserInteractionEnabled = true
         //making the UIPickerview has an accessory view and that is the toolbar
         MatchTypeTextField.inputAccessoryView = toolbar
-        //customizations
-      
+        //customizations for toolbar
         toolbar.barTintColor = .black
         //color of buttons for this app
         toolbar.tintColor = UIColor(red:0.949, green:0.722, blue:0.027, alpha:1.0)
@@ -120,14 +120,12 @@ class CreateMatchViewController: UIViewController {
     alert.addAction(UIAlertAction(title: "Delete Match",
                                   style: UIAlertAction.Style.destructive,
                                   handler: {(_: UIAlertAction!) in
-                                    //delete match and go back to Matches tableview
+                                    //delete match and go back to MatchesTableview
                                     self.performSegue(withIdentifier: "goToMatchesViewController", sender: self)
     }))
     self.present(alert, animated: true, completion: nil)
-    
     }
 }
-
 
 //Extension for the UIPicker delegate and Datasource with the function for them
 extension CreateMatchViewController: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -175,7 +173,7 @@ extension CreateMatchViewController: UIPickerViewDelegate, UIPickerViewDataSourc
               return pickerView.frame.size.width
     }
     
-    //Purpose: To get the value the user selected and store it
+    //Purpose: To get the value the user selected in the pickerView and store it
     //Precondition: The user has selected the row of the column
     //Postcondtion: The value of the selected row will be stored
     //@param UIPickerView, didSelectRow, inComponent
