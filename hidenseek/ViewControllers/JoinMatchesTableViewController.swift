@@ -1,4 +1,4 @@
-//
+//This class will hold a tableView that is a list of all of the available Matches the user can join. This class will make use of a custom cell.
 //  JoinMatchesTableViewController.swift
 //  hidenseek
 //
@@ -10,37 +10,55 @@ import UIKit
 
 class JoinMatchesTableViewController: UITableViewController {
 
+      let titles = ["MatchName1", "MatchName2", "MatchName3","MatchName4"]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.reloadData()
+       // tableView.delegate = self
+      //  tableView.dataSource = self
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        //self.navigationItem.rightBarButtonItem = self.editButtonItem
+       // self.navigationItem.rightBarButtonItem =  UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editMatch))
+              
+                self.navigationItem.title = "Available Matches"
     }
 
+    //Purpose:
+    //Precondtion: The
+    //Postcondition
+    @objc func editMatch(){
+        
+    }
+    
+    
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
+//Commented out for this
+   /* override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
-    }
+    }*/
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.titles.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "joinMatchTableViewCell", for: indexPath) as! JoinMatchTableViewCell
 
         // Configure the cell...
-
+        cell.matchNameLabel.text = self.titles[indexPath.row]
+  
+       
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
