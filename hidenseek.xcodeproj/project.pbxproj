@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A85C0E1324633B0C00CBF196 /* CreateMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85C0E1224633B0C00CBF196 /* CreateMatchViewController.swift */; };
 		A8E6A1EC244103B000889AAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6A1EB244103B000889AAD /* AppDelegate.swift */; };
 		A8E6A1EE244103B000889AAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6A1ED244103B000889AAD /* SceneDelegate.swift */; };
 		A8E6A1F0244103B000889AAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6A1EF244103B000889AAD /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A85C0E1224633B0C00CBF196 /* CreateMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMatchViewController.swift; sourceTree = "<group>"; };
 		A8E6A1E8244103B000889AAD /* hidenseek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hidenseek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8E6A1EB244103B000889AAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8E6A1ED244103B000889AAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				A8E6A2222452319900889AAD /* SignupViewController.swift */,
 				A8E6A2282458CB6A00889AAD /* MatchesTableViewController.swift */,
+				A85C0E1224633B0C00CBF196 /* CreateMatchViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A85C0E1324633B0C00CBF196 /* CreateMatchViewController.swift in Sources */,
 				A8E6A1F0244103B000889AAD /* ViewController.swift in Sources */,
 				A8E6A1EC244103B000889AAD /* AppDelegate.swift in Sources */,
 				A8E6A2292458CB6A00889AAD /* MatchesTableViewController.swift in Sources */,
