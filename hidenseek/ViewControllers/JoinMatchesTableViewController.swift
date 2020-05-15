@@ -9,15 +9,14 @@
 import UIKit
 
 class JoinMatchesTableViewController: UITableViewController {
-
+    //Array for testing 
       let titles = ["MatchName1", "MatchName2", "MatchName3","MatchName4"]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.reloadData()
-       // tableView.delegate = self
-      //  tableView.dataSource = self
+     
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
