@@ -5,10 +5,14 @@
 //  Created by juanita aguilar on 4/28/20.
 //  Copyright © 2020 none. All rights reserved.
 //
+//"matchesTableViewCell"
 
 import UIKit
 
 class MatchesTableViewController: UITableViewController, UINavigationControllerDelegate {
+    
+    //Array for testing
+         let titles = ["MatchName1", "MatchName2", "MatchName3","MatchName4"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,25 +41,26 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
     
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+  /*  override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
-    }
+    }*/
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.titles.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+      
+        let cell = tableView.dequeueReusableCell(withIdentifier: "matchesTableViewCell", for: indexPath) as! MatchesTableViewCell
         // Configure the cell...
+        cell.matchNameLabel.text = self.titles[indexPath.row]
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

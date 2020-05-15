@@ -11,6 +11,7 @@
 		A86CE10D246DC69C00E7A2AE /* JoinMatchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A86CE10C246DC69C00E7A2AE /* JoinMatchStoryboard.storyboard */; };
 		A86CE10F246DC8A600E7A2AE /* JoinMatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CE10E246DC8A500E7A2AE /* JoinMatchesTableViewController.swift */; };
 		A86CE112246DD18E00E7A2AE /* JoinMatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CE111246DD18E00E7A2AE /* JoinMatchTableViewCell.swift */; };
+		A86CE114246E184B00E7A2AE /* MatchesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CE113246E184B00E7A2AE /* MatchesTableViewCell.swift */; };
 		A8E6A1EC244103B000889AAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6A1EB244103B000889AAD /* AppDelegate.swift */; };
 		A8E6A1EE244103B000889AAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6A1ED244103B000889AAD /* SceneDelegate.swift */; };
 		A8E6A1F0244103B000889AAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6A1EF244103B000889AAD /* ViewController.swift */; };
@@ -48,6 +49,7 @@
 		A86CE10C246DC69C00E7A2AE /* JoinMatchStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JoinMatchStoryboard.storyboard; sourceTree = "<group>"; };
 		A86CE10E246DC8A500E7A2AE /* JoinMatchesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinMatchesTableViewController.swift; sourceTree = "<group>"; };
 		A86CE111246DD18E00E7A2AE /* JoinMatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinMatchTableViewCell.swift; sourceTree = "<group>"; };
+		A86CE113246E184B00E7A2AE /* MatchesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesTableViewCell.swift; sourceTree = "<group>"; };
 		A8E6A1E8244103B000889AAD /* hidenseek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hidenseek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8E6A1EB244103B000889AAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8E6A1ED244103B000889AAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				A86CE111246DD18E00E7A2AE /* JoinMatchTableViewCell.swift */,
+				A86CE113246E184B00E7A2AE /* MatchesTableViewCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				A8E6A2292458CB6A00889AAD /* MatchesTableViewController.swift in Sources */,
 				A8E6A2232452319A00889AAD /* SignupViewController.swift in Sources */,
 				A8E6A1F6244103B000889AAD /* hidenseek.xcdatamodeld in Sources */,
+				A86CE114246E184B00E7A2AE /* MatchesTableViewCell.swift in Sources */,
 				A86CE112246DD18E00E7A2AE /* JoinMatchTableViewCell.swift in Sources */,
 				A8E6A1EE244103B000889AAD /* SceneDelegate.swift in Sources */,
 			);
