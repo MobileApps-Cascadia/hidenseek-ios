@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A85C0E1324633B0C00CBF196 /* CreateMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85C0E1224633B0C00CBF196 /* CreateMatchViewController.swift */; };
+		A86CE10D246DC69C00E7A2AE /* JoinMatchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A86CE10C246DC69C00E7A2AE /* JoinMatchStoryboard.storyboard */; };
+		A86CE10F246DC8A600E7A2AE /* JoinMatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CE10E246DC8A500E7A2AE /* JoinMatchesTableViewController.swift */; };
+		A86CE112246DD18E00E7A2AE /* JoinMatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CE111246DD18E00E7A2AE /* JoinMatchTableViewCell.swift */; };
 		A8E6A1EC244103B000889AAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6A1EB244103B000889AAD /* AppDelegate.swift */; };
 		A8E6A1EE244103B000889AAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6A1ED244103B000889AAD /* SceneDelegate.swift */; };
 		A8E6A1F0244103B000889AAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6A1EF244103B000889AAD /* ViewController.swift */; };
@@ -42,6 +45,9 @@
 
 /* Begin PBXFileReference section */
 		A85C0E1224633B0C00CBF196 /* CreateMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMatchViewController.swift; sourceTree = "<group>"; };
+		A86CE10C246DC69C00E7A2AE /* JoinMatchStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JoinMatchStoryboard.storyboard; sourceTree = "<group>"; };
+		A86CE10E246DC8A500E7A2AE /* JoinMatchesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinMatchesTableViewController.swift; sourceTree = "<group>"; };
+		A86CE111246DD18E00E7A2AE /* JoinMatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinMatchTableViewCell.swift; sourceTree = "<group>"; };
 		A8E6A1E8244103B000889AAD /* hidenseek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hidenseek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8E6A1EB244103B000889AAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8E6A1ED244103B000889AAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A86CE110246DD13A00E7A2AE /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				A86CE111246DD18E00E7A2AE /* JoinMatchTableViewCell.swift */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
 		A8E6A1DF244103B000889AAD = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +125,7 @@
 		A8E6A1EA244103B000889AAD /* hidenseek */ = {
 			isa = PBXGroup;
 			children = (
+				A86CE110246DD13A00E7A2AE /* CustomCells */,
 				A8E6A2212452314200889AAD /* Storyboards */,
 				A8E6A2202452311800889AAD /* Models */,
 				A8E6A21F245230F500889AAD /* ViewControllers */,
@@ -150,6 +165,7 @@
 				A8E6A2222452319900889AAD /* SignupViewController.swift */,
 				A8E6A2282458CB6A00889AAD /* MatchesTableViewController.swift */,
 				A85C0E1224633B0C00CBF196 /* CreateMatchViewController.swift */,
+				A86CE10E246DC8A500E7A2AE /* JoinMatchesTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -166,6 +182,7 @@
 			children = (
 				A8E6A2242452550500889AAD /* HostJoinMatchStoryboard.storyboard */,
 				A8E6A2262458B91000889AAD /* MatchesStoryboard.storyboard */,
+				A86CE10C246DC69C00E7A2AE /* JoinMatchStoryboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -277,6 +294,7 @@
 				A8E6A1FB244103B500889AAD /* LaunchScreen.storyboard in Resources */,
 				A8E6A2252452550500889AAD /* HostJoinMatchStoryboard.storyboard in Resources */,
 				A8E6A1F8244103B500889AAD /* Assets.xcassets in Resources */,
+				A86CE10D246DC69C00E7A2AE /* JoinMatchStoryboard.storyboard in Resources */,
 				A8E6A2272458B91100889AAD /* MatchesStoryboard.storyboard in Resources */,
 				A8E6A1F3244103B000889AAD /* Main.storyboard in Resources */,
 			);
@@ -306,9 +324,11 @@
 				A85C0E1324633B0C00CBF196 /* CreateMatchViewController.swift in Sources */,
 				A8E6A1F0244103B000889AAD /* ViewController.swift in Sources */,
 				A8E6A1EC244103B000889AAD /* AppDelegate.swift in Sources */,
+				A86CE10F246DC8A600E7A2AE /* JoinMatchesTableViewController.swift in Sources */,
 				A8E6A2292458CB6A00889AAD /* MatchesTableViewController.swift in Sources */,
 				A8E6A2232452319A00889AAD /* SignupViewController.swift in Sources */,
 				A8E6A1F6244103B000889AAD /* hidenseek.xcdatamodeld in Sources */,
+				A86CE112246DD18E00E7A2AE /* JoinMatchTableViewCell.swift in Sources */,
 				A8E6A1EE244103B000889AAD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

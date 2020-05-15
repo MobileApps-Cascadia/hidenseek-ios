@@ -31,6 +31,9 @@
                                 <rect key="frame" x="120" y="533" width="140" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btn-joincopy"/>
+                                <connections>
+                                    <segue destination="yPK-59-Jup" kind="show" identifier="toJoinMatchesTableVC" id="4sj-Uz-ghI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.251" green="0.32500000000000001" blue="0.34899999999999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -50,6 +53,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BhG-f0-mDg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="91" y="155"/>
+        </scene>
+        <!--joinMatchesTableViewController-->
+        <scene sceneID="ofl-eS-JaJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="JoinMatchStoryboard" referencedIdentifier="joinMatchesTableViewController" id="yPK-59-Jup" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="LuR-Sv-6SD"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lVO-G3-axB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="207" y="276"/>
         </scene>
     </scenes>
     <resources>
