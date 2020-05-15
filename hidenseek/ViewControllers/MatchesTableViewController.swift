@@ -11,9 +11,9 @@ import UIKit
 
 class MatchesTableViewController: UITableViewController, UINavigationControllerDelegate {
     
-    //Array for testing
+    //Arrays for testing
          let titles = ["MatchName1", "MatchName2", "MatchName3","MatchName4"]
-
+    let dates = ["5/05/20", "4/04/20","1/01/20" ,"11/02/19"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -57,6 +57,7 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
         let cell = tableView.dequeueReusableCell(withIdentifier: "matchesTableViewCell", for: indexPath) as! MatchesTableViewCell
         // Configure the cell...
         cell.matchNameLabel.text = self.titles[indexPath.row]
+        cell.matchDateCreatedLabel.text = self.dates[indexPath.row]
 
         return cell
     }
