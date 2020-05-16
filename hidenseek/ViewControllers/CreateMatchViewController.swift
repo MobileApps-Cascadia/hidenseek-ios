@@ -32,7 +32,7 @@ class CreateMatchViewController: UIViewController {
     
     
     //arrays for the MatchTypePickerView,countTime and searchTime pickerviews
-    let type = ["HideNSeek"]
+    let type = [" ", "HideNSeek"]
     let countTime = ["Min","Sec"]
     let searchTime = ["Hrs","Min"]
     
@@ -51,7 +51,9 @@ class CreateMatchViewController: UIViewController {
         //if empty fields alert
         //save the fields to prepare for segue to the MatchesTableView
         //Temp segue
-         self.performSegue(withIdentifier: "goToMatchesViewController", sender: self)
+        // self.performSegue(withIdentifier: "goToMatchesViewController", sender: self)
+          self.dismiss(animated: true, completion: nil)
+    
         
     }
 
@@ -106,6 +108,11 @@ class CreateMatchViewController: UIViewController {
     }
     */
     
+    
+    @IBAction func cancelMatchButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
   //Purpose: To show the user an alert if they want to cancel
   //Precondition: The user clicks the canel icon
   //Postcondtion: Will present the user with an alert to cancel match or just dissmiss the alert
@@ -121,7 +128,7 @@ class CreateMatchViewController: UIViewController {
                                   style: UIAlertAction.Style.destructive,
                                   handler: {(_: UIAlertAction!) in
                                     //delete match and go back to MatchesTableview
-                                    self.performSegue(withIdentifier: "goToMatchesViewController", sender: self)
+                                    //self.performSegue(withIdentifier: "goToMatchesViewController", sender: self)
     }))
     self.present(alert, animated: true, completion: nil)
     }

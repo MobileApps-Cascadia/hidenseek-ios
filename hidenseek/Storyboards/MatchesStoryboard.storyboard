@@ -12,7 +12,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="matchesViewController" id="xkl-QH-7oc" customClass="MatchesTableViewController" customModule="hidenseek" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="73D-6u-0C6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.251" green="0.32500000000000001" blue="0.34899999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
@@ -50,18 +50,24 @@
                             <outlet property="delegate" destination="xkl-QH-7oc" id="AsK-mu-xTL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="iV6-qg-uVO"/>
+                    <navigationItem key="navigationItem" id="iV6-qg-uVO">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="9fi-2m-i4b">
+                            <connections>
+                                <segue destination="U2N-ws-V0p" kind="presentation" id="bRQ-Iu-axH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FTH-B9-NuG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-107.24637681159422" y="118.52678571428571"/>
+            <point key="canvasLocation" x="857.97101449275374" y="-642.1875"/>
         </scene>
         <!--Create Match View Controller-->
         <scene sceneID="7BH-Ma-FtZ">
             <objects>
                 <viewController storyboardIdentifier="createMatchViewController" id="U2N-ws-V0p" customClass="CreateMatchViewController" customModule="hidenseek" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u6n-24-Wed">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Match Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjK-Sh-c3n">
@@ -133,6 +139,23 @@
                                 <rect key="frame" x="112" y="469" width="282" height="97"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create Match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIy-FC-VxH">
+                                <rect key="frame" x="93" y="74" width="213" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <color key="textColor" red="0.94899999999999995" green="0.53700000000000003" blue="0.027" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8e0-1l-oOS">
+                                <rect key="frame" x="11" y="11" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel" image="btn-cancel copy">
+                                    <color key="titleColor" red="0.94899999999999995" green="0.72199999999999998" blue="0.027" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelMatchButton:" destination="U2N-ws-V0p" eventType="touchUpInside" id="j7Y-ng-bTG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.251" green="0.32500000000000001" blue="0.34899999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="Z1u-do-Oz0"/>
@@ -141,15 +164,15 @@
                         <outlet property="MatchTypeTextField" destination="pns-sk-ckB" id="3kd-Jb-qG4"/>
                         <outlet property="SearchTimePickerView" destination="ymZ-tS-V1E" id="cLl-Hn-GPb"/>
                         <outlet property="countTimePickerView" destination="wqA-Vg-zGn" id="kM0-wc-z2c"/>
-                        <segue destination="xkl-QH-7oc" kind="show" identifier="goToMatchesViewController" id="uDN-pd-hk4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLt-wY-Hma" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="618.84057971014499" y="118.52678571428571"/>
+            <point key="canvasLocation" x="1763.7681159420292" y="-670.3125"/>
         </scene>
     </scenes>
     <resources>
         <image name="btn-begincopy" width="317" height="317"/>
+        <image name="btn-cancel copy" width="158.5" height="158.5"/>
     </resources>
 </document>

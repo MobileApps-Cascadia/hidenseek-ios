@@ -22,7 +22,7 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-      self.navigationItem.rightBarButtonItem =  UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(createMatch))
+      //self.navigationItem.rightBarButtonItem =  UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(createMatch))
         
           self.navigationItem.title = "Matches"
     }
@@ -33,8 +33,8 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
     //Postcondtion: Will present the user with the create Match screen
     @objc func createMatch() {
     //the storyboard Id of the viewcontroller you want to navigate to and cast into the VC you want to nagigate to
-        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "createMatchViewController") as! CreateMatchViewController
-                   self.navigationController?.pushViewController(nextVC, animated: true)
+      //  let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "createMatchViewController") as! CreateMatchViewController
+                  // self.navigationController?.pushViewController(nextVC, animated: true)
             
             
     }
