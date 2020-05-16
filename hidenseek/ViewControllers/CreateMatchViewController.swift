@@ -16,8 +16,8 @@ class CreateMatchViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.navigationItem.rightBarButtonItem =  UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelMatch))
-                 self.navigationItem.title = "Create Match"
+       /* self.navigationItem.rightBarButtonItem =  UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelMatch))
+                 self.navigationItem.title = "Create Match"*/
 
         countTimePickerView.delegate = self
         SearchTimePickerView.delegate = self
@@ -108,15 +108,35 @@ class CreateMatchViewController: UIViewController {
     }
     */
     
-    
+    //Purpose: To show the user an alert if they want to cancel
+     //Precondition: The user clicks the cancelMatch icon
+     //Postcondtion: Will present the user with an alert to cancel match or just dissmiss the alert
     @IBAction func cancelMatchButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        
+        //To Do
+           //if the fields are empty and the user clicks on the cancel to just go back to the Matches tableview, if not and some of the fields are filled and the user clicks on the cancel button, show the alert.
+           let alert = UIAlertController(title: "Cancel Match?", message: "Do you really want to cancel this match?",         preferredStyle: UIAlertController.Style.alert)
+
+           alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: { _ in
+               //Cancel Action
+           }))
+           alert.addAction(UIAlertAction(title: "Delete Match",
+                                         style: UIAlertAction.Style.destructive,
+                                         handler: {(_: UIAlertAction!) in
+                                           //delete match and go back to MatchesTableview
+                                           //self.performSegue(withIdentifier: "goToMatchesViewController", sender: self)
+                                            self.dismiss(animated: true, completion: nil)
+           }))
+           self.present(alert, animated: true, completion: nil)
+           }
+        
+      //  self.dismiss(animated: true, completion: nil)
     }
     
   //Purpose: To show the user an alert if they want to cancel
   //Precondition: The user clicks the canel icon
   //Postcondtion: Will present the user with an alert to cancel match or just dissmiss the alert
-  @objc func cancelMatch() {
+/*  @objc func cancelMatch() {
     //To Do
     //if the fields are empty and the user clicks on the cancel to just go back to the Matches tableview, if not and some of the fields are filled and the user clicks on the cancel button, show the alert.
     let alert = UIAlertController(title: "Cancel Match?", message: "Do you really want to cancel this match?",         preferredStyle: UIAlertController.Style.alert)
@@ -132,7 +152,7 @@ class CreateMatchViewController: UIViewController {
     }))
     self.present(alert, animated: true, completion: nil)
     }
-}
+}*/
 
 //Extension for the UIPicker delegate and Datasource with the function for them
 extension CreateMatchViewController: UIPickerViewDelegate, UIPickerViewDataSource {
