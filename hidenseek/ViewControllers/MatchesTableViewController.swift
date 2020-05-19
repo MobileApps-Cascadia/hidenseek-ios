@@ -32,10 +32,7 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
     //Precondition: The User clicks the icon
     //Postcondtion: Will present the user with the create Match screen
     @objc func createMatch() {
-    //the storyboard Id of the viewcontroller you want to navigate to and cast into the VC you want to nagigate to
-      //  let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "createMatchViewController") as! CreateMatchViewController
-                  // self.navigationController?.pushViewController(nextVC, animated: true)
-            
+  
             
     }
     

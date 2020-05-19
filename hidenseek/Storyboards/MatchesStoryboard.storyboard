@@ -149,7 +149,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylE-I6-vC6">
-                                <rect key="frame" x="114" y="626" width="170" height="170"/>
+                                <rect key="frame" x="103" y="574" width="170" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <state key="normal" image="btn-CreateMatch"/>
                                 <connections>
