@@ -1,4 +1,4 @@
-//This class will allow the user to create a new match by filling in the fields and selecting the desired time using the UIPickeViews. This class will have TextFields for the matchName and matchPassword This class will have two UIPickerViews for the countTime and SearchTime.The countTime pickerView will have minutes and seconds fields and the SearchTime pickerView will have hours and minutes fields. The user will be able to click on the cancel button in the Navigation bar and an alert will popup or click on the hostbutton to create the match.This class will customize the label of each row for the pickerViews and store the value the user selected in the pickerView.
+//This class will allow the user to create a new match by filling in the fields and selecting the desired time using the UIPickeViews. This class will have TextFields for the matchName and matchPassword This class will have two UIPickerViews for the countTime and SearchTime.The countTime pickerView will have minutes and seconds fields and the SearchTime pickerView will have hours and minutes fields. The user will be able to click on the cancel button in the Navigation bar and an alert will popup or click on the create Match button to create the match.This class will customize the label of each row for the pickerViews and store the value the user selected in the pickerView.
 
 //  CreateMatchViewController.swift
 //  hidenseek
@@ -16,12 +16,9 @@ class CreateMatchViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.navigationItem.rightBarButtonItem =  UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelMatch))
-                 self.navigationItem.title = "Create Match"
-
         countTimePickerView.delegate = self
         SearchTimePickerView.delegate = self
-        createMatchTypePicker()
+        MatchTypePicker()
         createToolBar()
     }
     @IBOutlet weak var countTimePickerView: UIPickerView!
@@ -32,7 +29,7 @@ class CreateMatchViewController: UIViewController {
     
     
     //arrays for the MatchTypePickerView,countTime and searchTime pickerviews
-    let type = ["HideNSeek"]
+    let type = ["", "HideNSeek"]
     let countTime = ["Min","Sec"]
     let searchTime = ["Hrs","Min"]
     
@@ -43,22 +40,20 @@ class CreateMatchViewController: UIViewController {
    
     
     //Purpose: To create a match
-    //Precondition: The user click the button for the begin match
+    //Precondition: The user click the button for the create match
     //Postcondition: A match with the fields filled in will be used to create a Match
     @IBAction func createMatch(_ sender: Any) {
         //To Do
         //Check for empty fields
         //if empty fields alert
         //save the fields to prepare for segue to the MatchesTableView
-        //Temp segue
-         self.performSegue(withIdentifier: "goToMatchesViewController", sender: self)
-        
+          self.dismiss(animated: true, completion: nil)
     }
 
     //Purpose: To create a pickerView for the MatchTypeTextField
     //Precondition: None
     //Postcondtion: A pickerView for the matchtypetextfield will be created for the user to select the matchType
-    func createMatchTypePicker(){
+    func MatchTypePicker(){
         let typePicker = UIPickerView()
         typePicker.delegate = self
         //sets the popup view of the textField to a UIPickerView
@@ -106,26 +101,28 @@ class CreateMatchViewController: UIViewController {
     }
     */
     
-  //Purpose: To show the user an alert if they want to cancel
-  //Precondition: The user clicks the canel icon
-  //Postcondtion: Will present the user with an alert to cancel match or just dissmiss the alert
-  @objc func cancelMatch() {
-    //To Do
-    //if the fields are empty and the user clicks on the cancel to just go back to the Matches tableview, if not and some of the fields are filled and the user clicks on the cancel button, show the alert.
-    let alert = UIAlertController(title: "Cancel Match?", message: "Do you really want to cancel this match?",         preferredStyle: UIAlertController.Style.alert)
+    //Purpose: To show the user an alert if they want to cancel
+     //Precondition: The user clicks the cancelMatch button icon
+     //Postcondtion: Will present the user with an alert to cancel match or just dissmiss the alert
+    @IBAction func cancelMatchButton(_ sender: Any) {
+        
+        //To Do
+           //if the fields are empty and the user clicks on the cancel to just go back to the Matches tableview, if not and some of the fields are filled and the user clicks on the cancel button, show the alert.
+           let alert = UIAlertController(title: "Cancel Match?", message: "Do you really want to cancel this match?",         preferredStyle: UIAlertController.Style.alert)
 
-    alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: { _ in
-        //Cancel Action
-    }))
-    alert.addAction(UIAlertAction(title: "Delete Match",
-                                  style: UIAlertAction.Style.destructive,
-                                  handler: {(_: UIAlertAction!) in
-                                    //delete match and go back to MatchesTableview
-                                    self.performSegue(withIdentifier: "goToMatchesViewController", sender: self)
-    }))
-    self.present(alert, animated: true, completion: nil)
+           alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: { _ in
+               //Cancel Action
+           }))
+           alert.addAction(UIAlertAction(title: "Delete Match",
+                                         style: UIAlertAction.Style.destructive,
+                                         handler: {(_: UIAlertAction!) in
+                                           //delete match and go back to MatchesTableview
+                                            self.dismiss(animated: true, completion: nil)
+           }))
+           self.present(alert, animated: true, completion: nil)
+           }
     }
-}
+    
 
 //Extension for the UIPicker delegate and Datasource with the function for them
 extension CreateMatchViewController: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -153,7 +150,7 @@ extension CreateMatchViewController: UIPickerViewDelegate, UIPickerViewDataSourc
             switch component {
             case 0:
                 return 25
-            case 1://, 2: if had three columns for hrs,min and sec the rows for min and sec would be the same
+            case 1:
                 return 60
             default:
                 return 0
@@ -220,7 +217,6 @@ extension CreateMatchViewController: UIPickerViewDelegate, UIPickerViewDataSourc
         label.textAlignment = .center
       
         if pickerView == countTimePickerView {
-            //label.textColor =   UIColor(red:0.051, green:0.051, blue:0.051, alpha:1.0)
            if row == 0{
              if component == 0{
                  label.text = "\(row) \(countTime[0])"

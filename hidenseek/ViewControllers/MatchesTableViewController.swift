@@ -5,11 +5,15 @@
 //  Created by juanita aguilar on 4/28/20.
 //  Copyright © 2020 none. All rights reserved.
 //
+//"matchesTableViewCell"
 
 import UIKit
 
 class MatchesTableViewController: UITableViewController, UINavigationControllerDelegate {
-
+    
+    //Arrays for testing
+         let titles = ["MatchName1", "MatchName2", "MatchName3","MatchName4"]
+   // let dates = ["5/05/20", "4/04/20","1/01/20" ,"11/02/19"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,7 +22,7 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-      self.navigationItem.rightBarButtonItem =  UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(createMatch))
+      //self.navigationItem.rightBarButtonItem =  UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(createMatch))
         
           self.navigationItem.title = "Matches"
     }
@@ -28,34 +32,33 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
     //Precondition: The User clicks the icon
     //Postcondtion: Will present the user with the create Match screen
     @objc func createMatch() {
-    //the storyboard Id of the viewcontroller you want to navigate to and cast into the VC you want to nagigate to
-        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "createMatchViewController") as! CreateMatchViewController
-                   self.navigationController?.pushViewController(nextVC, animated: true)
-            
+  
             
     }
     
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+  /*  override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
-    }
+    }*/
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.titles.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+      
+        let cell = tableView.dequeueReusableCell(withIdentifier: "matchesTableViewCell", for: indexPath) as! MatchesTableViewCell
         // Configure the cell...
+        cell.matchNameLabel.text = self.titles[indexPath.row]
+       // cell.matchDateCreatedLabel.text = self.dates[indexPath.row]
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

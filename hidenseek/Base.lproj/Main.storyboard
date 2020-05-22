@@ -140,12 +140,12 @@
             </objects>
             <point key="canvasLocation" x="2671" y="138"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="Y0l-l9-XW8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GWo-ea-l8V" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="xh4-yK-6eP">
-                        <color key="badgeColor" red="0.050999999999999997" green="0.050999999999999997" blue="0.050999999999999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <tabBarItem key="tabBarItem" id="xh4-yK-6eP">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="34P-3I-JmI">

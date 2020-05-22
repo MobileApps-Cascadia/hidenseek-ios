@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Host Join Match View Controller-->
         <scene sceneID="h6V-Fy-sLy">
             <objects>
-                <viewController storyboardIdentifier="hostJoinMatchViewController" id="Vlc-5B-jKL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="hostJoinMatchViewController" id="Vlc-5B-jKL" customClass="HostJoinMatchViewController" customModule="hidenseek" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aUP-0z-18v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,7 +20,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="veK-7y-7is">
-                                <rect key="frame" x="120" y="354" width="140" height="139"/>
+                                <rect key="frame" x="120" y="354" width="140" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btn-hostcopy"/>
                                 <connections>
