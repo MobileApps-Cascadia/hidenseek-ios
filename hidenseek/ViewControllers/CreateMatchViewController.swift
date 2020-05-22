@@ -21,7 +21,7 @@ class CreateMatchViewController: UIViewController {
 
         countTimePickerView.delegate = self
         SearchTimePickerView.delegate = self
-        createMatchTypePicker()
+        MatchTypePicker()
         createToolBar()
     }
     @IBOutlet weak var countTimePickerView: UIPickerView!
@@ -32,7 +32,7 @@ class CreateMatchViewController: UIViewController {
     
     
     //arrays for the MatchTypePickerView,countTime and searchTime pickerviews
-    let type = [" ", "HideNSeek"]
+    let type = ["", "HideNSeek"]
     let countTime = ["Min","Sec"]
     let searchTime = ["Hrs","Min"]
     
@@ -60,7 +60,7 @@ class CreateMatchViewController: UIViewController {
     //Purpose: To create a pickerView for the MatchTypeTextField
     //Precondition: None
     //Postcondtion: A pickerView for the matchtypetextfield will be created for the user to select the matchType
-    func createMatchTypePicker(){
+    func MatchTypePicker(){
         let typePicker = UIPickerView()
         typePicker.delegate = self
         //sets the popup view of the textField to a UIPickerView
@@ -109,7 +109,7 @@ class CreateMatchViewController: UIViewController {
     */
     
     //Purpose: To show the user an alert if they want to cancel
-     //Precondition: The user clicks the cancelMatch icon
+     //Precondition: The user clicks the cancelMatch button icon
      //Postcondtion: Will present the user with an alert to cancel match or just dissmiss the alert
     @IBAction func cancelMatchButton(_ sender: Any) {
         
