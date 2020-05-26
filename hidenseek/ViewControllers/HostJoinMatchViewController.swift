@@ -15,7 +15,16 @@ class HostJoinMatchViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //hide the navigation bar 
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated:true)
+    }
 
     /*
     // MARK: - Navigation

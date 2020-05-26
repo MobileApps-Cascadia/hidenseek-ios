@@ -85,6 +85,7 @@
             <point key="canvasLocation" x="415.94202898550731" y="-158.03571428571428"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.050999999999999997" green="0.050999999999999997" blue="0.050999999999999997" alpha="1" colorSpace="calibratedRGB"/>
     <resources>
         <image name="btn-hostcopy" width="389" height="389"/>
         <image name="btn-joincopy" width="389" height="389"/>

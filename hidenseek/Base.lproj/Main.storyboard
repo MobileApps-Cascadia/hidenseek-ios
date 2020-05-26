@@ -97,7 +97,7 @@
             <objects>
                 <viewController id="WsQ-Hi-euu" customClass="SignupViewController" customModule="hidenseek" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rYY-3c-Ri1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon120x120" translatesAutoresizingMaskIntoConstraints="NO" id="ocb-b8-OMG">
