@@ -95,6 +95,9 @@
                                 <rect key="frame" x="99" y="535" width="170" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="btn-joincopy"/>
+                                <connections>
+                                    <action selector="joinMatchButton:" destination="r14-NJ-Mlz" eventType="touchUpInside" id="hV5-cH-f8L"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLy-iU-4am">
                                 <rect key="frame" x="211" y="215" width="126" height="21"/>
@@ -149,6 +152,13 @@
                         <color key="backgroundColor" red="0.251" green="0.32500000000000001" blue="0.34899999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="Wq9-bb-Ilz"/>
                     </view>
+                    <connections>
+                        <outlet property="counttimeLabel" destination="cba-cc-SR3" id="SRZ-12-459"/>
+                        <outlet property="matchNameLabel" destination="iLy-iU-4am" id="y95-N6-PMz"/>
+                        <outlet property="matchPasswordLabel" destination="yPa-hN-e5z" id="3dO-6x-GDq"/>
+                        <outlet property="matchTypeLabel" destination="xxg-AX-tnD" id="o75-e4-hUv"/>
+                        <outlet property="searchTimeLabel" destination="blf-Ey-Dx3" id="Z4M-gi-kCh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iZz-9f-cHP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

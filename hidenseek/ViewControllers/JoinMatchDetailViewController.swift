@@ -10,10 +10,15 @@ import UIKit
 
 class JoinMatchDetailViewController: UIViewController {
 
-   
+    @IBOutlet weak var matchNameLabel: UILabel!
     
+    @IBOutlet weak var matchPasswordLabel: UILabel!
     
+    @IBOutlet weak var matchTypeLabel: UILabel!
     
+    @IBOutlet weak var counttimeLabel: UILabel!
+    
+    @IBOutlet weak var searchTimeLabel: UILabel!
     
     
     
@@ -24,7 +29,22 @@ class JoinMatchDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func joinMatchButton(_ sender: Any) {
+        let alert = UIAlertController(title: "Joining the Match", message: "The Match Will Begin and the Count Time Timer will start",         preferredStyle: UIAlertController.Style.alert)
 
+         alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: { _ in
+             //Cancel Action
+            self.dismiss(animated: true, completion: nil)
+         }))
+        /* alert.addAction(UIAlertAction(title: "",
+                                       style: UIAlertAction.Style.destructive,
+                                       handler: {(_: UIAlertAction!) in
+                                         //delete match and go back to MatchesTableview
+                                          self.dismiss(animated: true, completion: nil)
+         }))*/
+         self.present(alert, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
