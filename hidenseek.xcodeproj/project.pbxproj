@@ -135,8 +135,8 @@
 				A8E6A2202452311800889AAD /* Models */,
 				A8E6A21F245230F500889AAD /* ViewControllers */,
 				A8E6A1EB244103B000889AAD /* AppDelegate.swift */,
-				A8E6A1ED244103B000889AAD /* SceneDelegate.swift */,
 				A8E6A1EF244103B000889AAD /* ViewController.swift */,
+				A8E6A1ED244103B000889AAD /* SceneDelegate.swift */,
 				A8E6A1F1244103B000889AAD /* Main.storyboard */,
 				A8E6A1F7244103B500889AAD /* Assets.xcassets */,
 				A8E6A1F9244103B500889AAD /* LaunchScreen.storyboard */,
@@ -513,6 +513,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DAHM2GGQ7T;
 				INFOPLIST_FILE = hidenseek/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -531,6 +532,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DAHM2GGQ7T;
 				INFOPLIST_FILE = hidenseek/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
