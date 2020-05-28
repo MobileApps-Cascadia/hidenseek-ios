@@ -38,7 +38,7 @@
                                             </state>
                                             <connections>
                                                 <action selector="matchNameButton:" destination="Ptd-9l-yQw" eventType="touchUpInside" id="Jqe-6t-ZwU"/>
-                                                <segue destination="5xf-29-yHs" kind="showDetail" id="TdA-PZ-axa"/>
+                                                <segue destination="5xf-29-yHs" kind="showDetail" identifier="toMatchDetailsSegue" id="TdA-PZ-axa"/>
                                             </connections>
                                         </button>
                                     </subviews>
