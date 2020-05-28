@@ -22,18 +22,18 @@ class BeginMatchDetailViewController: UIViewController {
     
     @IBAction func beginMatchButton(_ sender: Any) {
         
-        let alert = UIAlertController(title: "Cancel Begin Match", message: "Do you want to Cancel this Match?",         preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Begin Match", message: "The match will begin and the count time will start",         preferredStyle: UIAlertController.Style.alert)
 
                  alert.addAction(UIAlertAction(title: "Dissmis", style: UIAlertAction.Style.default, handler: { _ in
                      //Cancel Action
                     self.dismiss(animated: true, completion: nil)
                  }))
-                 alert.addAction(UIAlertAction(title: "Cancel Match",
+                /* alert.addAction(UIAlertAction(title: "",
                                                style: UIAlertAction.Style.destructive,
                                                handler: {(_: UIAlertAction!) in
                                                  //delete match and go back to MatchesTableview
                                                   self.dismiss(animated: true, completion: nil)
-                 }))
+        }))*/
                  self.present(alert, animated: true, completion: nil)
     }
     
