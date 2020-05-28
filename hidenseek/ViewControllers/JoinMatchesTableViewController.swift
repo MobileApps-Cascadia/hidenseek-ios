@@ -25,6 +25,7 @@ class JoinMatchesTableViewController: UITableViewController {
        // self.navigationItem.rightBarButtonItem =  UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editMatch))
               
                 self.navigationItem.title = "Available Matches"
+      
     }
 
     //Purpose:

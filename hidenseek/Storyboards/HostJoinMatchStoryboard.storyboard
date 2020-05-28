@@ -65,11 +65,11 @@
             </objects>
             <point key="canvasLocation" x="2192" y="285"/>
         </scene>
-        <!--settings-->
+        <!--Navigation Controller-->
         <scene sceneID="DVK-Qg-KKK">
             <objects>
                 <navigationController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="Dkx-Vv-4ak" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="settings" image="gear" catalog="system" selectedImage="gear" id="N4A-La-GCf">
+                    <tabBarItem key="tabBarItem" title="" selectedImage="gear" catalog="system" id="N4A-La-GCf">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="130" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -77,8 +77,14 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2iD-Kc-t1C">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.050999999999999997" green="0.050999999999999997" blue="0.050999999999999997" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="Vlc-5B-jKL" kind="relationship" relationship="rootViewController" id="D3h-lD-gI5"/>
                     </connections>
