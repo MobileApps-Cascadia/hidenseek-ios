@@ -53,7 +53,7 @@ class JoinMatchesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "joinMatchTableViewCell", for: indexPath) as! JoinMatchTableViewCell
 
         // Configure the cell...
-        cell.matchNameLabel.text = self.titles[indexPath.row]
+        //cell.matchNameLabel.text = self.titles[indexPath.row]
   
        
         return cell

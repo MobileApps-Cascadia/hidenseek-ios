@@ -266,6 +266,7 @@
                                     <color key="titleColor" red="0.94899999999999995" green="0.72199999999999998" blue="0.027" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="cancelMatchButton:" destination="5xf-29-yHs" eventType="touchUpInside" id="57k-pk-xcJ"/>
                                     <action selector="cancelMatchButton:" destination="U2N-ws-V0p" eventType="touchUpInside" id="xHa-8C-qoE"/>
                                 </connections>
                             </button>
