@@ -22,18 +22,18 @@ class BeginMatchDetailViewController: UIViewController {
     
     @IBAction func beginMatchButton(_ sender: Any) {
         
-        let alert = UIAlertController(title: "Starting the Match", message: "The Match Will Begin and the Count Time Timer will start",         preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Cancel Begin Match", message: "Do you want to Cancel this Match?",         preferredStyle: UIAlertController.Style.alert)
 
-                 alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: { _ in
+                 alert.addAction(UIAlertAction(title: "Dissmis", style: UIAlertAction.Style.default, handler: { _ in
                      //Cancel Action
                     self.dismiss(animated: true, completion: nil)
                  }))
-                /* alert.addAction(UIAlertAction(title: "",
+                 alert.addAction(UIAlertAction(title: "Cancel Match",
                                                style: UIAlertAction.Style.destructive,
                                                handler: {(_: UIAlertAction!) in
                                                  //delete match and go back to MatchesTableview
                                                   self.dismiss(animated: true, completion: nil)
-                 }))*/
+                 }))
                  self.present(alert, animated: true, completion: nil)
     }
     
@@ -43,7 +43,21 @@ class BeginMatchDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func cancelMatchButton(_ sender: Any) {
+        let alert = UIAlertController(title: "Cancel Match?", message: "Do you really want to cancel this match?",         preferredStyle: UIAlertController.Style.alert)
 
+                  alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: { _ in
+                      //Cancel Action
+                  }))
+                  alert.addAction(UIAlertAction(title: "Cancel Match",
+                                                style: UIAlertAction.Style.destructive,
+                                                handler: {(_: UIAlertAction!) in
+                                                  //delete match and go back to MatchesTableview
+                                                   self.dismiss(animated: true, completion: nil)
+                  }))
+                  self.present(alert, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
