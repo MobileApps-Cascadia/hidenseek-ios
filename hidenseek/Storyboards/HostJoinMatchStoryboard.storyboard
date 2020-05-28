@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wPc-Bf-aT6">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -10,7 +10,7 @@
         <!--Host Join Match View Controller-->
         <scene sceneID="h6V-Fy-sLy">
             <objects>
-                <viewController storyboardIdentifier="hostJoinMatchViewController" id="Vlc-5B-jKL" customClass="HostJoinMatchViewController" customModule="hidenseek" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" extendedLayoutIncludesOpaqueBars="YES" modalPresentationStyle="overFullScreen" id="Vlc-5B-jKL" customClass="HostJoinMatchViewController" customModule="hidenseek" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aUP-0z-18v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,10 +39,11 @@
                         <color key="backgroundColor" red="0.251" green="0.32500000000000001" blue="0.34899999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="N53-Nd-YJK"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ZfI-om-Sgl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3fi-Ds-fap" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-449.27536231884062" y="171.42857142857142"/>
+            <point key="canvasLocation" x="2236.231884057971" y="-158.03571428571428"/>
         </scene>
         <!--matchesViewController-->
         <scene sceneID="VAA-oj-ukN">
@@ -52,7 +53,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BhG-f0-mDg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="91" y="155"/>
+            <point key="canvasLocation" x="2909" y="-158"/>
         </scene>
         <!--joinMatchesTableViewController-->
         <scene sceneID="ofl-eS-JaJ">
@@ -62,9 +63,49 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lVO-G3-axB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="207" y="276"/>
+            <point key="canvasLocation" x="2192" y="285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DVK-Qg-KKK">
+            <objects>
+                <navigationController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="Dkx-Vv-4ak" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="N4A-La-GCf">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="133" vertical="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="pRJ-1l-5WF"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2iD-Kc-t1C">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Vlc-5B-jKL" kind="relationship" relationship="rootViewController" id="D3h-lD-gI5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SWP-0O-dpx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1326.0869565217392" y="-158.03571428571428"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Mqh-pS-3aI">
+            <objects>
+                <tabBarController storyboardIdentifier="hostJoinMatchViewController" wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overFullScreen" id="wPc-Bf-aT6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H5M-OB-501">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Dkx-Vv-4ak" kind="relationship" relationship="viewControllers" id="Dgb-Ml-dB9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xcH-5B-GUQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="415.94202898550731" y="-158.03571428571428"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.050999999999999997" green="0.050999999999999997" blue="0.050999999999999997" alpha="1" colorSpace="calibratedRGB"/>
     <resources>
         <image name="btn-hostcopy" width="389" height="389"/>
         <image name="btn-joincopy" width="389" height="389"/>

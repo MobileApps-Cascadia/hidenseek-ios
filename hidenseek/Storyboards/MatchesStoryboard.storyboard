@@ -60,7 +60,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FTH-B9-NuG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="857.97101449275374" y="-642.1875"/>
+            <point key="canvasLocation" x="1768.1159420289857" y="-642.1875"/>
         </scene>
         <!--Create Match View Controller-->
         <scene sceneID="7BH-Ma-FtZ">
@@ -168,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLt-wY-Hma" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1763.7681159420292" y="-670.3125"/>
+            <point key="canvasLocation" x="2673.913043478261" y="-670.3125"/>
         </scene>
     </scenes>
     <resources>

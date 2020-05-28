@@ -12,12 +12,22 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+  var isLoggedIn = true
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if(!isLoggedIn){
+            
+           
+        }
         return true
     }
+  /*  if userIsNotLoggedIn {
+        let storyboard = UIStoryboard(name: "Loginstoryboard", bundle: nil)
+        let loginController = storyboard.instantiateViewControllerWithIdentifier("LoginNavigationController") as UINavigationController
+        window?.rootViewController = loginController
+    }*/
 
     // MARK: UISceneSession Lifecycle
 
