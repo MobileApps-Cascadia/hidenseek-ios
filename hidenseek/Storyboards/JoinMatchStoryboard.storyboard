@@ -140,6 +140,9 @@
                                 <state key="normal" title="Cancel" image="btn-cancel copy">
                                     <color key="titleColor" red="0.94899999999999995" green="0.72199999999999998" blue="0.027" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelMatchButton:" destination="r14-NJ-Mlz" eventType="touchUpInside" id="zD8-y0-HGg"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30 min, 30 sec" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blf-Ey-Dx3">
                                 <rect key="frame" x="211" y="460" width="147" height="21"/>

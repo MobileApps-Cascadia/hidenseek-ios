@@ -45,6 +45,20 @@ class JoinMatchDetailViewController: UIViewController {
          self.present(alert, animated: true, completion: nil)
     }
     
+    @IBAction func cancelMatchButton(_ sender: Any) {
+        let alert = UIAlertController(title: "Cancel Join?", message: "Do you really want to cancel joining this match?",         preferredStyle: UIAlertController.Style.alert)
+
+        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: { _ in
+            //Cancel Action
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel Match",
+                                      style: UIAlertAction.Style.destructive,
+                                      handler: {(_: UIAlertAction!) in
+                                        //delete match and go back to MatchesTableview
+                                         self.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 
