@@ -10,6 +10,17 @@ import UIKit
 
 class BeginMatchDetailViewController: UIViewController {
 
+    @IBOutlet weak var matchNameLabel: UILabel!
+    
+    @IBOutlet weak var matchPasswordLabel: UILabel!
+    
+    @IBOutlet weak var matchTypeLabel: UILabel!
+    
+    @IBOutlet weak var countTimeLabel: UILabel!
+    
+    @IBOutlet weak var SearchTimeLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

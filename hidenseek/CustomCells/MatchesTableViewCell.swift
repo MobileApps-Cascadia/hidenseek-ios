@@ -11,7 +11,10 @@ import UIKit
 
 class MatchesTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var matchNameButton: UIButton!
+    @IBAction func matchNameButton(_ sender: Any) {
+               
+    }
+    
     
     
     @IBOutlet weak var matchDateCreatedLabel: UILabel!
@@ -20,7 +23,7 @@ class MatchesTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         self.backgroundColor = UIColor(red:0.251, green:0.325, blue:0.349, alpha:1.0)
-        setMatchButtonTextColor(button: matchNameButton)
+        //setMatchButtonTextColor(button: matchNameButton)
        //setMatchLabelUI(label: matchDateCreatedLabel)
     }
 
