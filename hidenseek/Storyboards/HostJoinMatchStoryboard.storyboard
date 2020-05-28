@@ -69,22 +69,16 @@
         <scene sceneID="DVK-Qg-KKK">
             <objects>
                 <navigationController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="Dkx-Vv-4ak" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" selectedImage="gear" catalog="system" id="N4A-La-GCf">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="130" vertical="0.0"/>
+                    <tabBarItem key="tabBarItem" title="" id="N4A-La-GCf">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="133" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="pRJ-1l-5WF"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2iD-Kc-t1C">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.050999999999999997" green="0.050999999999999997" blue="0.050999999999999997" alpha="1" colorSpace="calibratedRGB"/>
-                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="Vlc-5B-jKL" kind="relationship" relationship="rootViewController" id="D3h-lD-gI5"/>
                     </connections>
@@ -115,7 +109,6 @@
     <resources>
         <image name="btn-hostcopy" width="389" height="389"/>
         <image name="btn-joincopy" width="389" height="389"/>
-        <image name="gear" catalog="system" width="128" height="119"/>
         <image name="icon120x120" width="120" height="120"/>
     </resources>
 </document>
