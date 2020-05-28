@@ -53,7 +53,7 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
       
         let cell = tableView.dequeueReusableCell(withIdentifier: "matchesTableViewCell", for: indexPath) as! MatchesTableViewCell
         // Configure the cell...
-        cell.matchNameLabel.text = self.titles[indexPath.row]
+       // cell.matchNameLabel.text = self.titles[indexPath.row]
        // cell.matchDateCreatedLabel.text = self.dates[indexPath.row]
 
         return cell

@@ -13,6 +13,7 @@
 		A86CE112246DD18E00E7A2AE /* JoinMatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CE111246DD18E00E7A2AE /* JoinMatchTableViewCell.swift */; };
 		A86CE114246E184B00E7A2AE /* MatchesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CE113246E184B00E7A2AE /* MatchesTableViewCell.swift */; };
 		A87C529C2473592D005A2525 /* HostJoinMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87C529B2473592D005A2525 /* HostJoinMatchViewController.swift */; };
+		A87C52A2247F407C005A2525 /* BeginMatchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87C52A1247F407C005A2525 /* BeginMatchDetailViewController.swift */; };
 		A8E6A1EC244103B000889AAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6A1EB244103B000889AAD /* AppDelegate.swift */; };
 		A8E6A1EE244103B000889AAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6A1ED244103B000889AAD /* SceneDelegate.swift */; };
 		A8E6A1F0244103B000889AAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6A1EF244103B000889AAD /* ViewController.swift */; };
@@ -52,6 +53,7 @@
 		A86CE111246DD18E00E7A2AE /* JoinMatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinMatchTableViewCell.swift; sourceTree = "<group>"; };
 		A86CE113246E184B00E7A2AE /* MatchesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesTableViewCell.swift; sourceTree = "<group>"; };
 		A87C529B2473592D005A2525 /* HostJoinMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostJoinMatchViewController.swift; sourceTree = "<group>"; };
+		A87C52A1247F407C005A2525 /* BeginMatchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginMatchDetailViewController.swift; sourceTree = "<group>"; };
 		A8E6A1E8244103B000889AAD /* hidenseek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hidenseek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8E6A1EB244103B000889AAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8E6A1ED244103B000889AAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				A85C0E1224633B0C00CBF196 /* CreateMatchViewController.swift */,
 				A86CE10E246DC8A500E7A2AE /* JoinMatchesTableViewController.swift */,
 				A87C529B2473592D005A2525 /* HostJoinMatchViewController.swift */,
+				A87C52A1247F407C005A2525 /* BeginMatchDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				A85C0E1324633B0C00CBF196 /* CreateMatchViewController.swift in Sources */,
 				A8E6A1F0244103B000889AAD /* ViewController.swift in Sources */,
 				A8E6A1EC244103B000889AAD /* AppDelegate.swift in Sources */,
+				A87C52A2247F407C005A2525 /* BeginMatchDetailViewController.swift in Sources */,
 				A86CE10F246DC8A600E7A2AE /* JoinMatchesTableViewController.swift in Sources */,
 				A8E6A2292458CB6A00889AAD /* MatchesTableViewController.swift in Sources */,
 				A8E6A2232452319A00889AAD /* SignupViewController.swift in Sources */,
