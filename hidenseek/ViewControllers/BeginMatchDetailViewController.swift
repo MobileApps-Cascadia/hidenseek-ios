@@ -28,12 +28,7 @@ class BeginMatchDetailViewController: UIViewController {
                      //Cancel Action
                     self.dismiss(animated: true, completion: nil)
                  }))
-                /* alert.addAction(UIAlertAction(title: "",
-                                               style: UIAlertAction.Style.destructive,
-                                               handler: {(_: UIAlertAction!) in
-                                                 //delete match and go back to MatchesTableview
-                                                  self.dismiss(animated: true, completion: nil)
-        }))*/
+               
                  self.present(alert, animated: true, completion: nil)
     }
     
