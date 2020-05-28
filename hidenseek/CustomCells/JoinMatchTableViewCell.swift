@@ -10,8 +10,12 @@ import UIKit
 
 class JoinMatchTableViewCell: UITableViewCell {
     
-  
-    @IBOutlet weak var matchNameLabel: UILabel!
+    @IBAction func matchNameButton(_ sender: Any) {
+        
+        
+    }
+    
+
     
    
     
@@ -19,7 +23,7 @@ class JoinMatchTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
        self.backgroundColor = UIColor(red:0.251, green:0.325, blue:0.349, alpha:1.0)
-       setMatchLabelUI()
+      // setMatchLabelUI()
    
         
     }
@@ -33,9 +37,9 @@ class JoinMatchTableViewCell: UITableViewCell {
     //Purpose: to set the UI for the matchNameLabel
     //Precondtions: None
     //Postconditions: The matchNameLabel will have a tintcolor and text color set
-    func setMatchLabelUI(){
+    /*func setMatchLabelUI(){
         matchNameLabel.tintColor = UIColor(red:0.949, green:0.537, blue:0.027, alpha:1.0)
         matchNameLabel.textColor = UIColor(red:0.949, green:0.537, blue:0.027, alpha:1.0)
-    }
+    }*/
 
 }
