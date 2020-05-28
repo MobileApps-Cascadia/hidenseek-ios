@@ -220,6 +220,9 @@
                                 <rect key="frame" x="99" y="535" width="170" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="btn-begincopy"/>
+                                <connections>
+                                    <action selector="beginMatchButton:" destination="5xf-29-yHs" eventType="touchUpInside" id="Jkd-AO-oFp"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gln-1W-uie">
                                 <rect key="frame" x="211" y="215" width="126" height="21"/>
