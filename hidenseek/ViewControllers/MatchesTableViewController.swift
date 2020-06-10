@@ -56,7 +56,8 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
         //this is the outlet for the matchNameButton 
         cell.matchNameButton.setTitle(self.titles[indexPath.row], for: .normal)
        // cell.matchDateCreatedLabel.text = self.dates[indexPath.row]
-        
+        //set the color of the title to yellow
+       // cell.matchNameButton.setTitleColor(UIColor(red:0.949, green:0.722, blue:0.027, alpha:1.0), for: .normal)
 
         return cell
     }
