@@ -45,6 +45,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="matchDateCreatedLabel" destination="zIm-uu-0ku" id="RZU-K3-ddH"/>
+                                    <outlet property="matchNameButton" destination="Ffe-cq-aCS" id="GvH-sh-wDn"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

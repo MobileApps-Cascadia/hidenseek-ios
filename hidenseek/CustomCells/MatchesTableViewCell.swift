@@ -18,7 +18,8 @@ class MatchesTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var matchDateCreatedLabel: UILabel!
-    
+    //The button is an action and a outlet to have the matchName changed in the matchesTableView
+    @IBOutlet weak var matchNameButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

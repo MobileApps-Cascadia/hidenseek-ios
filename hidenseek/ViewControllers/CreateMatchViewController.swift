@@ -108,7 +108,7 @@ class CreateMatchViewController: UIViewController {
         
         //To Do
            //if the fields are empty and the user clicks on the cancel to just go back to the Matches tableview, if not and some of the fields are filled and the user clicks on the cancel button, show the alert.
-           let alert = UIAlertController(title: "Cancel Match?", message: "Cancelling will Delete this Match",         preferredStyle: UIAlertController.Style.alert)
+           let alert = UIAlertController(title: "Cancel Match?", message: "Canceling will Delete this Match",         preferredStyle: UIAlertController.Style.alert)
 
            alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: { _ in
                //Cancel Action
