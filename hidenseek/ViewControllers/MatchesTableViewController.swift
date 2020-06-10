@@ -52,9 +52,12 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       
         let cell = tableView.dequeueReusableCell(withIdentifier: "matchesTableViewCell", for: indexPath) as! MatchesTableViewCell
-        // Configure the cell...
-       // cell.matchNameLabel.text = self.titles[indexPath.row]
+        // Configure the cell
+        //this is the outlet for the matchNameButton 
+        cell.matchNameButton.setTitle(self.titles[indexPath.row], for: .normal)
        // cell.matchDateCreatedLabel.text = self.dates[indexPath.row]
+        //set the color of the title to yellow
+       // cell.matchNameButton.setTitleColor(UIColor(red:0.949, green:0.722, blue:0.027, alpha:1.0), for: .normal)
 
         return cell
     }

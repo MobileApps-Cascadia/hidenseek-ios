@@ -10,6 +10,7 @@ import UIKit
 
 class JoinMatchTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var matchNameButton: UIButton!
     @IBAction func matchNameButton(_ sender: Any) {
         
         

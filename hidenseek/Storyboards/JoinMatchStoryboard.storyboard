@@ -36,6 +36,9 @@
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="matchNameButton" destination="KWK-hf-Xk0" id="YCz-UV-4CA"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
