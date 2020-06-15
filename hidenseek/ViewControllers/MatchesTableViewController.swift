@@ -12,11 +12,11 @@ import UIKit
 class MatchesTableViewController: UITableViewController, UINavigationControllerDelegate {
     
     //Arrays for testing
-         let titles = ["MatchName1", "MatchName2", "MatchName3","MatchName4"]
+    var titles = ["MatchName1", "MatchName2", "MatchName3","MatchName4"]
    // let dates = ["5/05/20", "4/04/20","1/01/20" ,"11/02/19"]
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.reloadData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -27,12 +27,20 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
           self.navigationItem.title = "Matches"
     }
 
-    
+    //In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "toCreateMatchSegue"{
+            let vc = segue.destination as! CreateMatchViewController
+            vc.createdMatchDelegate =  self
+        }
+    }
     //Purpose: To show the user to the create Matches screen
     //Precondition: The User clicks the icon
     //Postcondtion: Will present the user with the create Match screen
     @objc func createMatch() {
-  
+   
             
     }
     
@@ -109,3 +117,14 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
     */
 
 }
+
+extension MatchesTableViewController: CreatedMatchDelegate{
+    func didCreateMatch(matchName: String, matchPassword: String, matchType: String, countTime: String, seekTime: String) {
+        
+        titles.append(matchName)
+        tableView.reloadData()
+       // print("Match name is: \(matchName)")
+        
+    }
+}
+

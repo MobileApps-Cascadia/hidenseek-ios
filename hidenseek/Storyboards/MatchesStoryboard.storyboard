@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,10 +30,10 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffe-cq-aCS">
-                                            <rect key="frame" x="20" y="6" width="102" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffe-cq-aCS">
+                                            <rect key="frame" x="20" y="6" width="224" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <state key="normal" title="Match Name">
                                                 <color key="titleColor" red="0.94899999999999995" green="0.53700000000000003" blue="0.027" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
@@ -58,14 +58,14 @@
                     <navigationItem key="navigationItem" id="iV6-qg-uVO">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="9fi-2m-i4b">
                             <connections>
-                                <segue destination="U2N-ws-V0p" kind="presentation" id="bRQ-Iu-axH"/>
+                                <segue destination="U2N-ws-V0p" kind="presentation" identifier="toCreateMatchSegue" id="bRQ-Iu-axH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FTH-B9-NuG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1858" y="-808"/>
+            <point key="canvasLocation" x="1857.9710144927537" y="-808.25892857142856"/>
         </scene>
         <!--Create Match View Controller-->
         <scene sceneID="7BH-Ma-FtZ">
@@ -169,6 +169,8 @@
                         <outlet property="MatchTypeTextField" destination="pns-sk-ckB" id="3kd-Jb-qG4"/>
                         <outlet property="SearchTimePickerView" destination="ymZ-tS-V1E" id="cLl-Hn-GPb"/>
                         <outlet property="countTimePickerView" destination="wqA-Vg-zGn" id="kM0-wc-z2c"/>
+                        <outlet property="matchNameTextField" destination="uhH-rw-rxq" id="Sns-se-Nf1"/>
+                        <outlet property="matchPasswordTextField" destination="sNW-zp-1Be" id="zmd-Yd-ceA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLt-wY-Hma" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

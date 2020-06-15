@@ -9,9 +9,15 @@
 
 import UIKit
 
+//protocol Delegate for getting the information from user input to create the match
+protocol CreatedMatchDelegate {
+    func didCreateMatch(matchName:String, matchPassword:String, matchType:String, countTime:String,seekTime: String)
+}
+
 class CreateMatchViewController: UIViewController {
-
-
+//variable to hold the CreatedMatchDelegate
+    var createdMatchDelegate: CreatedMatchDelegate?
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,6 +33,9 @@ class CreateMatchViewController: UIViewController {
     
     @IBOutlet weak var MatchTypeTextField: UITextField!
     
+    @IBOutlet weak var matchNameTextField: UITextField!
+    
+    @IBOutlet weak var matchPasswordTextField: UITextField!
     
     //arrays for the MatchTypePickerView,countTime and searchTime pickerviews
     let type = ["", "HideNSeek"]
@@ -46,7 +55,28 @@ class CreateMatchViewController: UIViewController {
         //To Do
         //Check for empty fields
         //if empty fields alert
-        //save the fields to prepare for segue to the MatchesTableView
+       
+        if matchNameTextField.text == nil || matchNameTextField.text == "" || matchPasswordTextField.text == nil || matchPasswordTextField.text == ""{
+            
+           // set alert for empty fields
+           let alert = UIAlertController(title: "No Input", message: "Please fill in empty fields", preferredStyle: UIAlertController.Style.alert)
+               alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.cancel, handler: { _ in
+                                            //Cancel Action
+                }))
+            self.present(alert, animated: true, completion: nil)
+        }
+        else if let name = matchNameTextField.text{
+            if let password = matchPasswordTextField.text {
+                //save the fields
+                if createdMatchDelegate != nil{
+                createdMatchDelegate?.didCreateMatch(matchName: name, matchPassword: password, matchType: "HideNSeek", countTime: "30" , seekTime: "30")
+                }
+                else{
+                    print("Delagate is nil")
+                }
+            }
+        }
+        
           self.dismiss(animated: true, completion: nil)
     }
 

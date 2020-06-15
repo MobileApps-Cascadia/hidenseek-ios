@@ -12,7 +12,7 @@ import UIKit
 class MatchesTableViewCell: UITableViewCell {
 
     @IBAction func matchNameButton(_ sender: Any) {
-               
+
     }
     
     
@@ -44,3 +44,9 @@ class MatchesTableViewCell: UITableViewCell {
 
 
 }
+/*extension MatchesTableViewCell: CreatedMatchDelegate{
+    func didCreateMatch(matchName: String, matchPassword: String, matchType: String, countTime: String, seekTime: String) {
+        //titles.append(matchName)
+        matchNameButton.setTitle(matchName, for: .normal)
+    }
+}*/
