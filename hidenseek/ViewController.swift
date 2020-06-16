@@ -63,6 +63,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
            print("TextField did begin editing method called")
            return true
        }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+         print("TextField didEND editing method called")
+        
+    }
 }
 
 
