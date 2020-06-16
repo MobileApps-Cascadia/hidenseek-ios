@@ -42,7 +42,7 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
         }
         if segue.identifier == "toMatchDetailsSegue"{
             let vc = segue.destination as! BeginMatchDetailViewController
-            
+            //Set the variables for the Match 
             vc.countTime = countTime
             vc.name = titles[titles.count-1]
             vc.type = type

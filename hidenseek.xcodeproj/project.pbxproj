@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8582253249849EF0088502C /* MatchTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8582252249849EF0088502C /* MatchTestModel.swift */; };
+		A858225724984BA00088502C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858225624984BA00088502C /* Constants.swift */; };
 		A85C0E1324633B0C00CBF196 /* CreateMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85C0E1224633B0C00CBF196 /* CreateMatchViewController.swift */; };
 		A86CE10D246DC69C00E7A2AE /* JoinMatchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A86CE10C246DC69C00E7A2AE /* JoinMatchStoryboard.storyboard */; };
 		A86CE10F246DC8A600E7A2AE /* JoinMatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CE10E246DC8A500E7A2AE /* JoinMatchesTableViewController.swift */; };
@@ -48,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A8582252249849EF0088502C /* MatchTestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTestModel.swift; sourceTree = "<group>"; };
+		A858225624984BA00088502C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A85C0E1224633B0C00CBF196 /* CreateMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMatchViewController.swift; sourceTree = "<group>"; };
 		A86CE10C246DC69C00E7A2AE /* JoinMatchStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JoinMatchStoryboard.storyboard; sourceTree = "<group>"; };
 		A86CE10E246DC8A500E7A2AE /* JoinMatchesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinMatchesTableViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +106,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A858225524984B740088502C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A858225624984BA00088502C /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		A86CE110246DD13A00E7A2AE /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +126,7 @@
 		A8E6A1DF244103B000889AAD = {
 			isa = PBXGroup;
 			children = (
+				A858225524984B740088502C /* Helpers */,
 				A8E6A1EA244103B000889AAD /* hidenseek */,
 				A8E6A204244103B500889AAD /* hidenseekTests */,
 				A8E6A20F244103B500889AAD /* hidenseekUITests */,
@@ -185,6 +198,7 @@
 		A8E6A2202452311800889AAD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A8582252249849EF0088502C /* MatchTestModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -338,6 +352,7 @@
 				A8E6A1EC244103B000889AAD /* AppDelegate.swift in Sources */,
 				A87C52A2247F407C005A2525 /* BeginMatchDetailViewController.swift in Sources */,
 				A86CE10F246DC8A600E7A2AE /* JoinMatchesTableViewController.swift in Sources */,
+				A858225724984BA00088502C /* Constants.swift in Sources */,
 				A8E6A2292458CB6A00889AAD /* MatchesTableViewController.swift in Sources */,
 				A8E6A2232452319A00889AAD /* SignupViewController.swift in Sources */,
 				A8E6A1F6244103B000889AAD /* hidenseek.xcdatamodeld in Sources */,
@@ -346,6 +361,7 @@
 				A86CE112246DD18E00E7A2AE /* JoinMatchTableViewCell.swift in Sources */,
 				A87C529C2473592D005A2525 /* HostJoinMatchViewController.swift in Sources */,
 				A8E6A1EE244103B000889AAD /* SceneDelegate.swift in Sources */,
+				A8582253249849EF0088502C /* MatchTestModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
