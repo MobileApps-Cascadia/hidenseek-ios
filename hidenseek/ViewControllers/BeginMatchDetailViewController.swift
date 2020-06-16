@@ -32,10 +32,21 @@ class BeginMatchDetailViewController: UIViewController {
                  self.present(alert, animated: true, completion: nil)
     }
     
+    var name:String = ""
+    var password:String = ""
+    var type:String = ""
+    var countTime:String = ""
+    var searchTime:String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        matchNameLabel.text = name
+        matchPasswordLabel.text = password
+        matchTypeLabel.text = type
+        countTimeLabel.text = countTime
+        SearchTimeLabel.text = searchTime
     }
     
     @IBAction func cancelMatchButton(_ sender: Any) {

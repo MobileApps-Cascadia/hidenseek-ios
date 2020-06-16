@@ -13,6 +13,11 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
     
     //Arrays for testing
     var titles = ["MatchName1", "MatchName2", "MatchName3","MatchName4"]
+    var password:String = ""
+    var type:String = ""
+    var countTime:String = ""
+    var searchTime:String = ""
+    
    // let dates = ["5/05/20", "4/04/20","1/01/20" ,"11/02/19"]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +40,20 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
             let vc = segue.destination as! CreateMatchViewController
             vc.createdMatchDelegate =  self
         }
+        if segue.identifier == "toMatchDetailsSegue"{
+            let vc = segue.destination as! BeginMatchDetailViewController
+            
+            vc.countTime = countTime
+            vc.name = titles[titles.count-1]
+            vc.type = type
+            vc.searchTime = searchTime
+            vc.password = password
+            
+            
+            
+        }
+        //pass input to the MatchDetail screen
+        
     }
     //Purpose: To show the user to the create Matches screen
     //Precondition: The User clicks the icon
@@ -122,6 +141,11 @@ extension MatchesTableViewController: CreatedMatchDelegate{
     func didCreateMatch(matchName: String, matchPassword: String, matchType: String, countTime: String, seekTime: String) {
         
         titles.append(matchName)
+        password = matchPassword
+        type = matchType
+        self.countTime = countTime
+        searchTime = seekTime
+        
         tableView.reloadData()
        // print("Match name is: \(matchName)")
         

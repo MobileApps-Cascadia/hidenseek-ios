@@ -69,7 +69,7 @@ class CreateMatchViewController: UIViewController {
             if let password = matchPasswordTextField.text {
                 //save the fields
                 if createdMatchDelegate != nil{
-                createdMatchDelegate?.didCreateMatch(matchName: name, matchPassword: password, matchType: "HideNSeek", countTime: "30" , seekTime: "30")
+                createdMatchDelegate?.didCreateMatch(matchName: name, matchPassword: password, matchType: "HideNSeek", countTime: "1 Min 0 Sec" , seekTime: "1 Hrs 0 Min")
                 }
                 else{
                     print("Delagate is nil")
