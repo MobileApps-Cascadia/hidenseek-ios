@@ -9,18 +9,22 @@
 import UIKit
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var signupButton: UIButton!
  
- 
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    
+    @IBOutlet weak var passwordTextField: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
 
     // MARK: - Navigation
@@ -42,6 +46,18 @@ class ViewController: UIViewController {
             
             //self.performSegue(withIdentifier: "toHostJoinMatchStoryboardSegue", sender: self)
     }
+    
+    /*Perform actions when the return key is pressed*/
+    /*   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+           if textField == emailTextField {
+               //change cursor from username to password textfield
+              // self.userName = textField.text ?? "no username"
+               passwordTextField.becomeFirstResponder()
+           } else if textField == passwordTextField {
+             self.view.endEditing(true)
+           }
+           return true
+        }*/
 }
 
 
