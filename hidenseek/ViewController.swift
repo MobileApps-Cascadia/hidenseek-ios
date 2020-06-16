@@ -58,6 +58,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
            }
            return true
         }*/
+    //MARK: - UITextFieldDelegate  methods
+       func textFieldShouldBeginEditing(_ textField : UITextField) -> Bool{
+           print("TextField did begin editing method called")
+           return true
+       }
 }
 
 
