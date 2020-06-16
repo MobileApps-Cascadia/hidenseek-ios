@@ -40,6 +40,7 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
             let vc = segue.destination as! CreateMatchViewController
             vc.createdMatchDelegate =  self
         }
+        //pass input to the MatchDetail screen
         if segue.identifier == "toMatchDetailsSegue"{
             let vc = segue.destination as! BeginMatchDetailViewController
             //Set the variables for the Match 
@@ -52,7 +53,7 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
             
             
         }
-        //pass input to the MatchDetail screen
+
         
     }
     //Purpose: To show the user to the create Matches screen
@@ -147,7 +148,6 @@ extension MatchesTableViewController: CreatedMatchDelegate{
         searchTime = seekTime
         
         tableView.reloadData()
-       // print("Match name is: \(matchName)")
         
     }
 }

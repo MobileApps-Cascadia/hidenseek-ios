@@ -69,7 +69,8 @@ class CreateMatchViewController: UIViewController {
             if let password = matchPasswordTextField.text {
                 //save the fields
                 if createdMatchDelegate != nil{
-                createdMatchDelegate?.didCreateMatch(matchName: name, matchPassword: password, matchType: "HideNSeek", countTime: "1 Min 0 Sec" , seekTime: "1 Hrs 0 Min")
+                    //For this test I am just putting in the input of the Constant MatchTestModel
+                    createdMatchDelegate?.didCreateMatch(matchName: name, matchPassword: password, matchType: Constants.MATCHTESTMODEL.matchType! , countTime: Constants.MATCHTESTMODEL.countTime! , seekTime: Constants.MATCHTESTMODEL.seekTime!)
                 }
                 else{
                     print("Delagate is nil")
