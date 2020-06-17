@@ -63,7 +63,7 @@ extension SignupViewController: UITextFieldDelegate {
               }else if textField == passwordTextField {
                 
                  self.view.endEditing(true)
-                 usernameTextField .becomeFirstResponder()
+                 usernameTextField.becomeFirstResponder()
               }else if textField == usernameTextField {
               
                 self.view.endEditing(true)

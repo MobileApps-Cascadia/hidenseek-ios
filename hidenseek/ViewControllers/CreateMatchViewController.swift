@@ -24,6 +24,9 @@ class CreateMatchViewController: UIViewController {
         // Do any additional setup after loading the view.
         countTimePickerView.delegate = self
         SearchTimePickerView.delegate = self
+        MatchTypeTextField.delegate = self
+        matchNameTextField.delegate = self
+        matchPasswordTextField.delegate = self
         MatchTypePicker()
         createToolBar()
     }
@@ -309,4 +312,39 @@ extension CreateMatchViewController: UIPickerViewDelegate, UIPickerViewDataSourc
           return type[row]
           
       }*/
+}
+
+//Extension for UITextField and methods
+extension CreateMatchViewController: UITextFieldDelegate {
+
+    /*Perform actions when the return key is pressed*/
+         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+              if textField ==  matchNameTextField{
+                  //change cursor from username to password textfield
+                 // self.userName = textField.text ?? "no username"
+                  self.view.endEditing(true)
+                  matchPasswordTextField.becomeFirstResponder()
+               
+              }else if textField == matchPasswordTextField {
+                
+                 self.view.endEditing(true)
+                 MatchTypeTextField.becomeFirstResponder()
+                
+              }else if textField == MatchTypeTextField {
+              
+                self.view.endEditing(true)
+              }
+              return true
+           }
+       
+       //MARK: - UITextFieldDelegate  methods
+       /*   func textFieldShouldBeginEditing(_ textField : UITextField) -> Bool{
+           
+              //print("TextField did begin editing method called")
+              return true
+          }*/
+      /* func textFieldDidEndEditing(_ textField: UITextField) {
+            //print("TextField didEND editing method called")
+           
+       }*/
 }
