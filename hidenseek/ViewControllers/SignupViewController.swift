@@ -23,6 +23,9 @@ class SignupViewController: UIViewController {
 
         // Do any additional setup after loading the view.
          // self.navigationItem.title = "Signup"
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        usernameTextField.delegate = self
     }
     
 
@@ -46,4 +49,39 @@ class SignupViewController: UIViewController {
     
 }
 
+//Extension for UITextField and methods
+extension SignupViewController: UITextFieldDelegate {
+
+    /*Perform actions when the return key is pressed*/
+         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+              if textField == emailTextField {
+                  //change cursor from username to password textfield
+                 // self.userName = textField.text ?? "no username"
+                  self.view.endEditing(true)
+                  passwordTextField.becomeFirstResponder()
+               
+              }else if textField == passwordTextField {
+                
+                 self.view.endEditing(true)
+                 usernameTextField .becomeFirstResponder()
+              }else if textField == usernameTextField {
+              
+                self.view.endEditing(true)
+              }
+              return true
+           }
+       
+       //MARK: - UITextFieldDelegate  methods
+       /*   func textFieldShouldBeginEditing(_ textField : UITextField) -> Bool{
+           
+              //print("TextField did begin editing method called")
+              return true
+          }*/
+      /* func textFieldDidEndEditing(_ textField: UITextField) {
+            //print("TextField didEND editing method called")
+           
+       }*/
+}
+
+   
 
