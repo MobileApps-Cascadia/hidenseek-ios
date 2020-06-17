@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController {
 
     
     @IBOutlet weak var signupButton: UIButton!
@@ -47,27 +47,38 @@ class ViewController: UIViewController, UITextFieldDelegate {
             //self.performSegue(withIdentifier: "toHostJoinMatchStoryboardSegue", sender: self)
     }
     
-    /*Perform actions when the return key is pressed*/
-    /*   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-           if textField == emailTextField {
-               //change cursor from username to password textfield
-              // self.userName = textField.text ?? "no username"
-               passwordTextField.becomeFirstResponder()
-           } else if textField == passwordTextField {
-             self.view.endEditing(true)
-           }
-           return true
-        }*/
-    //MARK: - UITextFieldDelegate  methods
-       func textFieldShouldBeginEditing(_ textField : UITextField) -> Bool{
-           print("TextField did begin editing method called")
-           return true
-       }
-    func textFieldDidEndEditing(_ textField: UITextField) {
-         print("TextField didEND editing method called")
-        
-    }
+   
 }
 
+//Extension for UITextField and methods
+extension ViewController: UITextFieldDelegate {
+
+    /*Perform actions when the return key is pressed*/
+         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+              if textField == emailTextField {
+                  //change cursor from username to password textfield
+                 // self.userName = textField.text ?? "no username"
+                  self.view.endEditing(true)
+                  passwordTextField.becomeFirstResponder()
+             
+               
+              } else if textField == passwordTextField {
+                
+               self.view.endEditing(true)
+              }
+              return true
+           }
+       
+       //MARK: - UITextFieldDelegate  methods
+          func textFieldShouldBeginEditing(_ textField : UITextField) -> Bool{
+           
+              print("TextField did begin editing method called")
+              return true
+          }
+       func textFieldDidEndEditing(_ textField: UITextField) {
+            print("TextField didEND editing method called")
+           
+       }
+}
 
    

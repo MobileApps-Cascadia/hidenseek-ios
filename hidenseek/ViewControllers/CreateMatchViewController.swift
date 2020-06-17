@@ -73,7 +73,7 @@ class CreateMatchViewController: UIViewController {
                     createdMatchDelegate?.didCreateMatch(matchName: name, matchPassword: password, matchType: Constants.MATCHTESTMODEL.matchType! , countTime: Constants.MATCHTESTMODEL.countTime! , seekTime: Constants.MATCHTESTMODEL.seekTime!)
                 }
                 else{
-                    print("Delagate is nil")
+                    //print("Delagate is nil")
                 }
             }
         }
