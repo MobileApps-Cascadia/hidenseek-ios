@@ -10,5 +10,7 @@ import Foundation
 
 class Constants {
     
-    public static let MATCHTESTMODEL = MatchTestModel(name: "Sam's Beach Party", matchPassword: "password", matchType: "HideNSeek", countTime: "1 Min 0 Sec", seekTime: "1 Hrs 0 Min" )
+    public static let MATCHTESTMODEL1 = MatchTestModel(name: "Jamie's BBQ", matchPassword: "password", matchType: "HideNSeek", countTime: "1 Min 0 Sec", seekTime: "1 Hrs 0 Min" )
+    
+    public static let MATCHTESTMODEL2 = MatchTestModel(name: "Beach Party", matchPassword: "password", matchType: "HideNSeek", countTime: "1 Min 0 Sec", seekTime: "1 Hrs 0 Min" )
 }

@@ -12,18 +12,22 @@ import UIKit
 class MatchesTableViewController: UITableViewController, UINavigationControllerDelegate {
     
     //Arrays for testing
-    var titles = ["MatchName1", "MatchName2", "MatchName3","MatchName4"]
+    var titles = ["Jamie's BBQ"]//["MatchName1", "MatchName2", "MatchName3","MatchName4"]
+    var testMatchModels = [Constants.MATCHTESTMODEL1]
+
+    var name = ""
     var password:String = ""
     var type:String = ""
     var countTime:String = ""
     var searchTime:String = ""
+    var testMatchMod = MatchTestModel(name: "", matchPassword: "", matchType: "", countTime: "", seekTime: "")
     
-   // let dates = ["5/05/20", "4/04/20","1/01/20" ,"11/02/19"]
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.reloadData()
+       tableView.reloadData()
         // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        //self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
@@ -43,12 +47,20 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
         //pass input to the MatchDetail screen
         if segue.identifier == "toMatchDetailsSegue"{
             let vc = segue.destination as! BeginMatchDetailViewController
-            //Set the variables for the Match 
-            vc.countTime = countTime
-            vc.name = titles[titles.count-1]
-            vc.type = type
-            vc.searchTime = searchTime
-            vc.password = password
+            //Set the variables for the Match
+            //if let name = self.testMatchMod.name{
+             //   vc.name = name
+           // }
+           // if let countTime = self.testMatchMod.countTime{
+            //    vc.countTime = countTime
+           // }
+              vc.name = Constants.MATCHTESTMODEL2.name!//titles[titles.count-1]
+                 vc.password = Constants.MATCHTESTMODEL2.matchPassword!//password*/
+            vc.countTime = Constants.MATCHTESTMODEL2.countTime!//countTime
+          
+            vc.type = Constants.MATCHTESTMODEL2.matchType!//type
+            vc.searchTime = Constants.MATCHTESTMODEL2.seekTime!//SearchTime
+       
             
             
             
@@ -73,16 +85,22 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.titles.count
+         print(self.testMatchModels.count)
+        return self.testMatchModels.count
+       //testMatchModels.count//.titles.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       
         let cell = tableView.dequeueReusableCell(withIdentifier: "matchesTableViewCell", for: indexPath) as! MatchesTableViewCell
+        
+        let matchModel = self.testMatchModels[indexPath.row]
         // Configure the cell
         //this is the outlet for the matchNameButton 
-        cell.matchNameButton.setTitle(self.titles[indexPath.row], for: .normal)
+       // cell.matchNameButton.setTitle(self.titles[indexPath.row], for: .normal)
+        //set the titel to the testModel will have to change to real model once I get the real one done
+        cell.matchNameButton.setTitle(matchModel.name, for: .normal)
        // cell.matchDateCreatedLabel.text = self.dates[indexPath.row]
         //set the color of the title to yellow
        // cell.matchNameButton.setTitleColor(UIColor(red:0.949, green:0.722, blue:0.027, alpha:1.0), for: .normal)
@@ -90,6 +108,18 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
         return cell
     }
     
+    //If the user selects the cell go the the details vC with the info
+    //The Creatematch delegate in the create matchVC will pass the input from the user.
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         
+        let indexPath = tableView.indexPathForSelectedRow
+        let match = testMatchModels[indexPath!.row]
+        if let name = match.name{
+           self.name = name
+
+            self.performSegue(withIdentifier: "toMatchDetailsSegue", sender: self)
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -141,13 +171,16 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
 extension MatchesTableViewController: CreatedMatchDelegate{
     func didCreateMatch(matchName: String, matchPassword: String, matchType: String, countTime: String, seekTime: String) {
         
-        titles.append(matchName)
-        password = matchPassword
-        type = matchType
-        self.countTime = countTime
-        searchTime = seekTime
+        //titles.append(matchName)
+         self.testMatchMod = MatchTestModel(name: matchName, matchPassword: matchPassword, matchType: matchType, countTime: countTime, seekTime: seekTime)
         
-        tableView.reloadData()
+        testMatchModels.append(self.testMatchMod)
+      //password = matchPassword
+     // type = matchType
+     // self.countTime = countTime
+     // searchTime = seekTime
+        
+       tableView.reloadData()
         
     }
 }

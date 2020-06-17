@@ -10,7 +10,7 @@ import UIKit
 
 class JoinMatchesTableViewController: UITableViewController {
     //Array for testing 
-      let titles = ["MatchName1", "MatchName2", "MatchName3","MatchName4", "Sam's Beach Party"]
+      let titles = ["Jamie's BBQ", "Beach Party"]
     
     
     override func viewDidLoad() {
