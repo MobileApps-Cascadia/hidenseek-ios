@@ -85,7 +85,6 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-         print(self.testMatchModels.count)
         return self.testMatchModels.count
        //testMatchModels.count//.titles.count
     }

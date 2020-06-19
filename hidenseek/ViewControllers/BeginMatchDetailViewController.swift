@@ -24,7 +24,7 @@ class BeginMatchDetailViewController: UIViewController {
         
         let alert = UIAlertController(title: "Begin Match", message: "The match will begin and the count time will start",         preferredStyle: UIAlertController.Style.alert)
 
-                 alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: { _ in
+                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { _ in
                      //Cancel Action
                     self.dismiss(animated: true, completion: nil)
                  }))
