@@ -45,9 +45,10 @@ class CreateMatchViewController: UIViewController {
     let countTime = ["Min","Sec"]
     let searchTime = ["Hrs","Min"]
     
-    var hour: Int = 0
     var minutes: Int = 0
     var seconds: Int = 0
+    var hour: Int = 0
+    var seekMinutes: Int = 0
     var matchType: String?
    
     
@@ -59,7 +60,7 @@ class CreateMatchViewController: UIViewController {
         //Check for empty fields
         //if empty fields alert
        
-        if matchNameTextField.text == nil || matchNameTextField.text == "" || matchPasswordTextField.text == nil || matchPasswordTextField.text == ""{
+        if matchNameTextField.text == nil || matchNameTextField.text == "" || matchPasswordTextField.text == nil || matchPasswordTextField.text == "" || countTimePickerView.selectedRow(inComponent: 0) == 0 && countTimePickerView.selectedRow(inComponent: 1) == 0 || SearchTimePickerView.selectedRow(inComponent: 0) == 0 && SearchTimePickerView.selectedRow(inComponent: 1) == 0{
             
            // set alert for empty fields
            let alert = UIAlertController(title: "No Input", message: "Please fill in empty fields", preferredStyle: UIAlertController.Style.alert)
@@ -70,15 +71,22 @@ class CreateMatchViewController: UIViewController {
         }
         else if let name = matchNameTextField.text{
             if let password = matchPasswordTextField.text {
+                if let type = matchNameTextField.text{
+                    if let searchTimePickerView = SearchTimePickerView{
+                    
+               
                 //save the fields
                 if createdMatchDelegate != nil{
                     //For this test I am just putting in the input of the Constant MatchTestModel1
-                    createdMatchDelegate?.didCreateMatch(matchName: Constants.MATCHTESTMODEL2.name!, matchPassword: Constants.MATCHTESTMODEL2.matchPassword! , matchType: Constants.MATCHTESTMODEL2.matchType! , countTime: Constants.MATCHTESTMODEL2.countTime! , seekTime: Constants.MATCHTESTMODEL2.seekTime!)
-                  //  createdMatchDelegate?.didCreateMatch(matchName: name, matchPassword: password, matchType: Constants.MATCHTESTMODEL2.matchType! , countTime: Constants.MATCHTESTMODEL2.countTime! , seekTime: Constants.MATCHTESTMODEL2.seekTime!)
+                   // createdMatchDelegate?.didCreateMatch(matchName: Constants.MATCHTESTMODEL2.name!, matchPassword: Constants.MATCHTESTMODEL2.matchPassword! , matchType: Constants.MATCHTESTMODEL2.matchType! , countTime: Constants.MATCHTESTMODEL2.countTime! , seekTime: Constants.MATCHTESTMODEL2.seekTime!)
+                    
+                    createdMatchDelegate?.didCreateMatch(matchName: name, matchPassword: password, matchType: matchType!, countTime: "\(minutes) Min,  \(seconds) Sec", seekTime: "\(hour) Hrs,  \(seekMinutes) Min")
                 }
                 else{
-                    //print("Delagate is nil")
+
                 }
+                }
+               }
             }
         }
         
@@ -156,7 +164,9 @@ class CreateMatchViewController: UIViewController {
            }))
            self.present(alert, animated: true, completion: nil)
            }
-    }
+    
+   
+}
     
 
 //Extension for the UIPicker delegate and Datasource with the function for them
@@ -215,7 +225,7 @@ extension CreateMatchViewController: UIPickerViewDelegate, UIPickerViewDataSourc
             case 0:
                   minutes = row
             case 1:
-                seconds  = row
+                  seconds = row
             default:
                 break;
             }
@@ -332,16 +342,18 @@ extension CreateMatchViewController: UITextFieldDelegate {
                  MatchTypeTextField.becomeFirstResponder()
                 
               }else if textField == MatchTypeTextField {
-              
+             
                 self.view.endEditing(true)
               }
               return true
            }
        
        //MARK: - UITextFieldDelegate  methods
-       /*   func textFieldShouldBeginEditing(_ textField : UITextField) -> Bool{
-           
-              //print("TextField did begin editing method called")
+       /* func textFieldShouldBeginEditing(_ textField : UITextField) -> Bool{
+           if textField == MatchTypeTextField {
+                 return false; //do not show keyboard nor cursor
+             }
+              print("TextField did begin editing method called")
               return true
           }*/
       /* func textFieldDidEndEditing(_ textField: UITextField) {

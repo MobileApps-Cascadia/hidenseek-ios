@@ -32,21 +32,22 @@ class BeginMatchDetailViewController: UIViewController {
                  self.present(alert, animated: true, completion: nil)
     }
     
-    var name:String = ""
-    var password:String = ""
-    var type:String = ""
-    var countTime:String = ""
-    var searchTime:String = ""
+    //var name:String = ""
+   // var password:String = ""
+   // var type:String = ""
+   // var countTime:String = ""
+    //var searchTime:String = ""
+     var testMatchModel = MatchTestModel(name: "", matchPassword: "", matchType: "", countTime: "", seekTime: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        matchNameLabel.text = name
-        matchPasswordLabel.text = password
-        matchTypeLabel.text = type
-        countTimeLabel.text = countTime
-        SearchTimeLabel.text = searchTime
+        matchNameLabel.text = testMatchModel.name//name
+        matchPasswordLabel.text = testMatchModel.matchPassword//password
+        matchTypeLabel.text = testMatchModel.matchType//type
+        countTimeLabel.text = testMatchModel.countTime//countTime
+        SearchTimeLabel.text = testMatchModel.seekTime//searchTime
     }
     
     @IBAction func cancelMatchButton(_ sender: Any) {

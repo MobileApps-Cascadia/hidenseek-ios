@@ -9,17 +9,30 @@
 
 import UIKit
 
+//Delegate for the matchesTableView to get the indexPath of the cell
+protocol ItemCellDelegate: class {
+    func didClickMatchNameButton(for cell: MatchesTableViewCell)
+}
+
 class MatchesTableViewCell: UITableViewCell {
-
-    @IBAction func matchNameButton(_ sender: Any) {
-
-    }
+ 
+     weak var delegate: ItemCellDelegate?
+       //have an instance of an IndexPath to get the IndexPath.row of the Match Model in the matchModel array in the Matches tableView
+    var indexPath: IndexPath?
     
+    //gets the index path of the cell when the button is clicked
+    @IBAction func matchNameButton(_ sender: Any) {
+        let currentCell = self
+        delegate?.didClickMatchNameButton(for: currentCell) //<-Pass some info about the cell
+      // print("From custom Cell Index path is: \(indexPath)")
+     
+    }
     
     
     @IBOutlet weak var matchDateCreatedLabel: UILabel!
     //The button is an action and a outlet to have the matchName changed in the matchesTableView
     @IBOutlet weak var matchNameButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -44,9 +57,4 @@ class MatchesTableViewCell: UITableViewCell {
 
 
 }
-/*extension MatchesTableViewCell: CreatedMatchDelegate{
-    func didCreateMatch(matchName: String, matchPassword: String, matchType: String, countTime: String, seekTime: String) {
-        //titles.append(matchName)
-        matchNameButton.setTitle(matchName, for: .normal)
-    }
-}*/
+

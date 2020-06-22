@@ -12,16 +12,12 @@ import UIKit
 class MatchesTableViewController: UITableViewController, UINavigationControllerDelegate {
     
     //Arrays for testing
-    var titles = ["Jamie's BBQ"]//["MatchName1", "MatchName2", "MatchName3","MatchName4"]
     var testMatchModels = [Constants.MATCHTESTMODEL1]
 
     var name = ""
-    var password:String = ""
-    var type:String = ""
-    var countTime:String = ""
-    var searchTime:String = ""
+  
     var testMatchMod = MatchTestModel(name: "", matchPassword: "", matchType: "", countTime: "", seekTime: "")
-    
+    var row:Int?
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +31,7 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
         
           self.navigationItem.title = "Matches"
     }
-
+  
     //In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
@@ -48,31 +44,19 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
         if segue.identifier == "toMatchDetailsSegue"{
             let vc = segue.destination as! BeginMatchDetailViewController
             //Set the variables for the Match
-            //if let name = self.testMatchMod.name{
-             //   vc.name = name
-           // }
-           // if let countTime = self.testMatchMod.countTime{
-            //    vc.countTime = countTime
-           // }
-              vc.name = Constants.MATCHTESTMODEL2.name!//titles[titles.count-1]
-                 vc.password = Constants.MATCHTESTMODEL2.matchPassword!//password*/
-            vc.countTime = Constants.MATCHTESTMODEL2.countTime!//countTime
+            //pass the testMatchModel to the MatchDetails controller to send over the data for the match
+            //print("From segue The self.row is:  \(self.row)")
+   
+            vc.testMatchModel = testMatchModels[self.row!]
           
-            vc.type = Constants.MATCHTESTMODEL2.matchType!//type
-            vc.searchTime = Constants.MATCHTESTMODEL2.seekTime!//SearchTime
-       
-            
-            
-            
         }
-
         
     }
     //Purpose: To show the user to the create Matches screen
     //Precondition: The User clicks the icon
     //Postcondtion: Will present the user with the create Match screen
     @objc func createMatch() {
-   
+        
             
     }
     
@@ -84,9 +68,8 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
     }*/
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+     
         return self.testMatchModels.count
-       //testMatchModels.count//.titles.count
     }
 
     
@@ -95,12 +78,20 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
         let cell = tableView.dequeueReusableCell(withIdentifier: "matchesTableViewCell", for: indexPath) as! MatchesTableViewCell
         
         let matchModel = self.testMatchModels[indexPath.row]
+     
+      
+        //Set indexPath of the cell
+               cell.indexPath = indexPath
+               cell.delegate = self
+        
+        self.testMatchMod = matchModel
+        
+        self.row = cell.indexPath?.row
+        
+          //print("Row: \(indexPath.row)")
         // Configure the cell
-        //this is the outlet for the matchNameButton 
-       // cell.matchNameButton.setTitle(self.titles[indexPath.row], for: .normal)
         //set the titel to the testModel will have to change to real model once I get the real one done
         cell.matchNameButton.setTitle(matchModel.name, for: .normal)
-       // cell.matchDateCreatedLabel.text = self.dates[indexPath.row]
         //set the color of the title to yellow
        // cell.matchNameButton.setTitleColor(UIColor(red:0.949, green:0.722, blue:0.027, alpha:1.0), for: .normal)
 
@@ -110,12 +101,18 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
     //If the user selects the cell go the the details vC with the info
     //The Creatematch delegate in the create matchVC will pass the input from the user.
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         
+ 
         let indexPath = tableView.indexPathForSelectedRow
+        
         let match = testMatchModels[indexPath!.row]
+        
         if let name = match.name{
            self.name = name
-
+            
+           self.row = indexPath!.row
+            
+            //print("Row: \(indexPath!.row)")
+         
             self.performSegue(withIdentifier: "toMatchDetailsSegue", sender: self)
         }
     }
@@ -167,20 +164,22 @@ class MatchesTableViewController: UITableViewController, UINavigationControllerD
 
 }
 
-extension MatchesTableViewController: CreatedMatchDelegate{
+extension MatchesTableViewController: CreatedMatchDelegate, ItemCellDelegate{
+    
+    
     func didCreateMatch(matchName: String, matchPassword: String, matchType: String, countTime: String, seekTime: String) {
         
-        //titles.append(matchName)
-         self.testMatchMod = MatchTestModel(name: matchName, matchPassword: matchPassword, matchType: matchType, countTime: countTime, seekTime: seekTime)
+         var matchModel = MatchTestModel(name: matchName, matchPassword: matchPassword, matchType: matchType, countTime: countTime, seekTime: seekTime)
         
-        testMatchModels.append(self.testMatchMod)
-      //password = matchPassword
-     // type = matchType
-     // self.countTime = countTime
-     // searchTime = seekTime
-        
-       tableView.reloadData()
-        
+         testMatchModels.append(matchModel)
+         tableView.reloadData()
     }
+    
+    //the function for the cell to get the indexPath and set the self.row to it
+    func didClickMatchNameButton(for cell: MatchesTableViewCell){
+        self.row = cell.indexPath?.row
+          // print("MatchNameButton tapped!")
+           //print("cell's indexPath=\(cell.indexPath!)")
+       }
 }
 
