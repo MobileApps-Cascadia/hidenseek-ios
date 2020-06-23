@@ -9,10 +9,11 @@
 import UIKit
 
 class JoinMatchesTableViewController: UITableViewController {
-    //Array for testing 
-      let titles = ["Jamie's BBQ", "Beach Party"]
+    //Array for testing
+    var row: Int?
+    var availableMatchModels = [Constants.MATCHTESTMODEL1]
     
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.reloadData()
@@ -44,8 +45,8 @@ class JoinMatchesTableViewController: UITableViewController {
     }*/
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return self.titles.count
+      
+        return self.availableMatchModels.count
     }
 
     
@@ -53,12 +54,19 @@ class JoinMatchesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "joinMatchTableViewCell", for: indexPath) as! JoinMatchTableViewCell
 
         // Configure the cell...
-        cell.matchNameButton.setTitle(self.titles[indexPath.row], for: .normal)
+        cell.matchNameButton.setTitle(self.availableMatchModels[indexPath.row].name, for: .normal)
+        //Set indexPath of the cell
+        cell.indexPath = indexPath
+        cell.delegate = self
        
         return cell
     }
 
-
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -94,14 +102,33 @@ class JoinMatchesTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        //pass input to the MatchDetail screen
+               if segue.identifier == "toJoinMatchDetailVCSegue"{
+                   let vc = segue.destination as! JoinMatchDetailViewController
+                   //Set the variables for the Match
+                   //pass the testMatchModel to the MatchDetails controller to send over the data for the match
+                   //print("From segue The self.row is:  \(self.row)")
+          
+                   vc.testMatchModel = availableMatchModels[self.row!]
+                 
+               }
     }
-    */
+    
 
+}
+extension JoinMatchesTableViewController: JoinCellDelegate{
+ 
+    //the function for the cell to get the indexPath and set the self.row to it
+    func didClickMatchNameButton(for cell: JoinMatchTableViewCell){
+        self.row = cell.indexPath?.row
+          // print("MatchNameButton tapped!")
+           //print("cell's indexPath=\(cell.indexPath!)")
+       }
 }

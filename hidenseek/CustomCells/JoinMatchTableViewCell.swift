@@ -8,11 +8,22 @@
 
 import UIKit
 
+//Delegate for the availableMatchesTableView to get the indexPath of the cell
+protocol JoinCellDelegate: class {
+    func didClickMatchNameButton(for cell: JoinMatchTableViewCell)
+}
 class JoinMatchTableViewCell: UITableViewCell {
     
+    weak var delegate: JoinCellDelegate?
+        //have an instance of an IndexPath to get the IndexPath.row of the Match Model in the matchModel array in the Matches tableView
+     var indexPath: IndexPath?
+    
     @IBOutlet weak var matchNameButton: UIButton!
+        //gets the index path of the cell when the button is clicked
     @IBAction func matchNameButton(_ sender: Any) {
-        
+        let currentCell = self
+               delegate?.didClickMatchNameButton(for: currentCell) //<-Pass some info about the cell
+             // print("From custom Cell Index path is: \(indexPath)")
         
     }
     

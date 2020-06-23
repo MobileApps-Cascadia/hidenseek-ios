@@ -172,6 +172,7 @@ extension MatchesTableViewController: CreatedMatchDelegate, ItemCellDelegate{
          var matchModel = MatchTestModel(name: matchName, matchPassword: matchPassword, matchType: matchType, countTime: countTime, seekTime: seekTime)
         
          testMatchModels.append(matchModel)
+       
          tableView.reloadData()
     }
     

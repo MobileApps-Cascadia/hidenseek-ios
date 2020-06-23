@@ -31,7 +31,7 @@
                                             </state>
                                             <connections>
                                                 <action selector="matchNameButton:" destination="J2C-lA-F8j" eventType="touchUpInside" id="qpf-wL-fc0"/>
-                                                <segue destination="r14-NJ-Mlz" kind="showDetail" id="9pC-y0-k2i"/>
+                                                <segue destination="r14-NJ-Mlz" kind="showDetail" identifier="toJoinMatchDetailVCSegue" id="9pC-y0-k2i"/>
                                             </connections>
                                         </button>
                                     </subviews>

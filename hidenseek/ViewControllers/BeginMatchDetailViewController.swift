@@ -9,6 +9,8 @@
 import UIKit
 
 class BeginMatchDetailViewController: UIViewController {
+    
+    var testMatchModel = MatchTestModel(name: "", matchPassword: "", matchType: "", countTime: "", seekTime: "")
 
     @IBOutlet weak var matchNameLabel: UILabel!
     
@@ -19,7 +21,8 @@ class BeginMatchDetailViewController: UIViewController {
     @IBOutlet weak var countTimeLabel: UILabel!
     
     @IBOutlet weak var SearchTimeLabel: UILabel!
-    
+    //set the alert to begin the match
+    //set the delegate to pass the new match to the availableMatchesTableView
     @IBAction func beginMatchButton(_ sender: Any) {
         
         let alert = UIAlertController(title: "Begin Match", message: "The match will begin and the count time will start",         preferredStyle: UIAlertController.Style.alert)
@@ -32,22 +35,18 @@ class BeginMatchDetailViewController: UIViewController {
                  self.present(alert, animated: true, completion: nil)
     }
     
-    //var name:String = ""
-   // var password:String = ""
-   // var type:String = ""
-   // var countTime:String = ""
-    //var searchTime:String = ""
-     var testMatchModel = MatchTestModel(name: "", matchPassword: "", matchType: "", countTime: "", seekTime: "")
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        matchNameLabel.text = testMatchModel.name//name
-        matchPasswordLabel.text = testMatchModel.matchPassword//password
-        matchTypeLabel.text = testMatchModel.matchType//type
-        countTimeLabel.text = testMatchModel.countTime//countTime
-        SearchTimeLabel.text = testMatchModel.seekTime//searchTime
+        matchNameLabel.text = testMatchModel.name
+        matchPasswordLabel.text = testMatchModel.matchPassword
+        matchTypeLabel.text = testMatchModel.matchType
+        countTimeLabel.text = testMatchModel.countTime
+        SearchTimeLabel.text = testMatchModel.seekTime
+        
     }
     
     @IBAction func cancelMatchButton(_ sender: Any) {

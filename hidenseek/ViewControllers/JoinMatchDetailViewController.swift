@@ -20,12 +20,16 @@ class JoinMatchDetailViewController: UIViewController {
     
     @IBOutlet weak var searchTimeLabel: UILabel!
     
-    
+       var testMatchModel = MatchTestModel(name: "", matchPassword: "", matchType: "", countTime: "", seekTime: "")
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        matchNameLabel.text = testMatchModel.name
+        matchPasswordLabel.text = testMatchModel.matchPassword
+        matchTypeLabel.text = testMatchModel.matchType
+        counttimeLabel.text = testMatchModel.countTime
+        searchTimeLabel.text = testMatchModel.seekTime
         // Do any additional setup after loading the view.
     }
     

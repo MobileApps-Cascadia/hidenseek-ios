@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A852516124A28B4F0042EEA3 /* MatchTestModelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A852516024A28B4E0042EEA3 /* MatchTestModelRepository.swift */; };
 		A8582253249849EF0088502C /* MatchTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8582252249849EF0088502C /* MatchTestModel.swift */; };
 		A858225724984BA00088502C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858225624984BA00088502C /* Constants.swift */; };
 		A85C0E1324633B0C00CBF196 /* CreateMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85C0E1224633B0C00CBF196 /* CreateMatchViewController.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A852516024A28B4E0042EEA3 /* MatchTestModelRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTestModelRepository.swift; sourceTree = "<group>"; };
 		A8582252249849EF0088502C /* MatchTestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTestModel.swift; sourceTree = "<group>"; };
 		A858225624984BA00088502C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A85C0E1224633B0C00CBF196 /* CreateMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMatchViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A852515F24A28ACC0042EEA3 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				A852516024A28B4E0042EEA3 /* MatchTestModelRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		A858225524984B740088502C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +136,7 @@
 		A8E6A1DF244103B000889AAD = {
 			isa = PBXGroup;
 			children = (
+				A852515F24A28ACC0042EEA3 /* Repositories */,
 				A858225524984B740088502C /* Helpers */,
 				A8E6A1EA244103B000889AAD /* hidenseek */,
 				A8E6A204244103B500889AAD /* hidenseekTests */,
@@ -354,6 +365,7 @@
 				A86CE10F246DC8A600E7A2AE /* JoinMatchesTableViewController.swift in Sources */,
 				A858225724984BA00088502C /* Constants.swift in Sources */,
 				A8E6A2292458CB6A00889AAD /* MatchesTableViewController.swift in Sources */,
+				A852516124A28B4F0042EEA3 /* MatchTestModelRepository.swift in Sources */,
 				A8E6A2232452319A00889AAD /* SignupViewController.swift in Sources */,
 				A8E6A1F6244103B000889AAD /* hidenseek.xcdatamodeld in Sources */,
 				A87C52A4247F6F70005A2525 /* JoinMatchDetailViewController.swift in Sources */,
