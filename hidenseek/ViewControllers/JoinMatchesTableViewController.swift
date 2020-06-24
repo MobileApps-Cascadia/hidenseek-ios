@@ -11,7 +11,9 @@ import UIKit
 class JoinMatchesTableViewController: UITableViewController {
     //Array for testing
     var row: Int?
-    var availableMatchModels = [Constants.MATCHTESTMODEL1]
+    var availableMatchModels = [Constants.MATCHTESTMODEL1, Constants.MATCHTESTMODEL2]
+    
+    var matchRepository: MatchTestModelRepository?
     
         
     override func viewDidLoad() {
@@ -26,7 +28,13 @@ class JoinMatchesTableViewController: UITableViewController {
        // self.navigationItem.rightBarButtonItem =  UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editMatch))
               
                 self.navigationItem.title = "Available Matches"
+        
+   
       
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+     //   getAvaliableMatches(allMatchesArray:self.matchRepository!.getAllMatchTestModels() )
     }
 
     //Purpose:
@@ -121,8 +129,23 @@ class JoinMatchesTableViewController: UITableViewController {
                }
     }
     
+    func getAvaliableMatches(allMatchesArray: [MatchTestModel]?) {
+       
+        
+        if let matches = allMatchesArray{
+         for match in matches {
+            //would need to check each match to see if it is available
+            self.availableMatchModels.append(match)
+                print("Count is : \(self.availableMatchModels.count)")
+         }
+        }else{
+               print("Array is NIL! Count is : \(self.availableMatchModels.count)")
+        }
+       
+    }
 
 }
+
 extension JoinMatchesTableViewController: JoinCellDelegate{
  
     //the function for the cell to get the indexPath and set the self.row to it

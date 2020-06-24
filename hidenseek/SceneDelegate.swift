@@ -11,7 +11,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+   
   
    
 
@@ -22,12 +22,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
     
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+      //   let matchRepo = MatchTestModelRepository()
        
         window = UIWindow(windowScene: windowScene)
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
                   // Make sure you set an Storyboard ID for the view controller you want to instantiate
                   window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC") as UIViewController
                   window?.makeKeyAndVisible()
+        
+              
+          //    let joinMatchController = window?.rootViewController as? JoinMatchesTableViewController
+                
+       // joinMatchController!.matchRepository = matchRepo
+              
         
         
             //If the user is logged in then will launch the HostJoinMatchStoryboard and if not will launch the Main storyboard with the viewcontroller with storyboard Id of LoginVC

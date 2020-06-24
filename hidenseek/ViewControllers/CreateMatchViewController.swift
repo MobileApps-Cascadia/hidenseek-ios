@@ -62,32 +62,35 @@ class CreateMatchViewController: UIViewController {
        
         if matchNameTextField.text == nil || matchNameTextField.text == "" || matchPasswordTextField.text == nil || matchPasswordTextField.text == "" || countTimePickerView.selectedRow(inComponent: 0) == 0 && countTimePickerView.selectedRow(inComponent: 1) == 0 || SearchTimePickerView.selectedRow(inComponent: 0) == 0 && SearchTimePickerView.selectedRow(inComponent: 1) == 0{
             
+            
            // set alert for empty fields
-           let alert = UIAlertController(title: "No Input", message: "Please fill in empty fields", preferredStyle: UIAlertController.Style.alert)
+          let alert = UIAlertController(title: "No Input", message: "Please fill in empty fields", preferredStyle: UIAlertController.Style.alert)
                alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.cancel, handler: { _ in
                                             //Cancel Action
                 }))
             self.present(alert, animated: true, completion: nil)
+         
         }
-        else if let name = matchNameTextField.text{
+        else{
+            if let name = matchNameTextField.text{
             if let password = matchPasswordTextField.text {
                 if let type = matchNameTextField.text{
                     if let searchTimePickerView = SearchTimePickerView{
-                    
-               
                 //save the fields
                 if createdMatchDelegate != nil{
                     //For this test I am just putting in the input of the Constant MatchTestModel1
                    // createdMatchDelegate?.didCreateMatch(matchName: Constants.MATCHTESTMODEL2.name!, matchPassword: Constants.MATCHTESTMODEL2.matchPassword! , matchType: Constants.MATCHTESTMODEL2.matchType! , countTime: Constants.MATCHTESTMODEL2.countTime! , seekTime: Constants.MATCHTESTMODEL2.seekTime!)
                     
                     createdMatchDelegate?.didCreateMatch(matchName: name, matchPassword: password, matchType: matchType!, countTime: "\(minutes) Min,  \(seconds) Sec", seekTime: "\(hour) Hrs,  \(seekMinutes) Min")
+                    print("hours and seek min: \(hour) \(seekMinutes)")
                 }
-                else{
+              //  else{
 
-                }
-                }
+               // }
                }
-            }
+               }
+                }
+                }
         }
         
           self.dismiss(animated: true, completion: nil)
@@ -234,7 +237,7 @@ extension CreateMatchViewController: UIPickerViewDelegate, UIPickerViewDataSourc
             case 0:
                 hour = row
             case 1:
-                minutes = row
+                seekMinutes = row
             default:
                 break;
             }

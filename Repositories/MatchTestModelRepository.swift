@@ -12,9 +12,13 @@ class MatchTestModelRepository{
     
     var matchTestModels = [MatchTestModel]()
     
+    
     //return all of the match models in the array
     func getAllMatchTestModels() -> [MatchTestModel]{
+        self.matchTestModels.append(Constants.MATCHTESTMODEL1)
         return matchTestModels
     }
+    
+    
     
 }
