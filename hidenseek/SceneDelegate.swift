@@ -23,17 +23,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-      //   let matchRepo = MatchTestModelRepository()
+       //  let matchRepo = MatchTestModelRepository()
        
-        window = UIWindow(windowScene: windowScene)
+      //  window = UIWindow(windowScene: windowScene)
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+       /* let storyboard = UIStoryboard(name: "Main", bundle: nil)
                   // Make sure you set an Storyboard ID for the view controller you want to instantiate
                   window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC") as UIViewController
-                  window?.makeKeyAndVisible()
+                  window?.makeKeyAndVisible()*/
         
               
-          //    let joinMatchController = window?.rootViewController as? JoinMatchesTableViewController
+           //   let joinMatchController = window?.rootViewController as? JoinMatchesTableViewController
                 
        // joinMatchController!.matchRepository = matchRepo
               

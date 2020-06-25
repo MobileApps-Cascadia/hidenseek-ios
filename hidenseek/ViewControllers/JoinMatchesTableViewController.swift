@@ -13,7 +13,7 @@ class JoinMatchesTableViewController: UITableViewController {
     var row: Int?
     var availableMatchModels = [Constants.MATCHTESTMODEL1, Constants.MATCHTESTMODEL2]
     
-    var matchRepository: MatchTestModelRepository?
+   // var matchRepository: MatchTestModelRepository?
     
         
     override func viewDidLoad() {
@@ -34,7 +34,7 @@ class JoinMatchesTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-     //   getAvaliableMatches(allMatchesArray:self.matchRepository!.getAllMatchTestModels() )
+      //  getAvaliableMatches(allMatchesArray:self.matchRepository!.getAllMatchTestModels() )
     }
 
     //Purpose:
@@ -74,6 +74,16 @@ class JoinMatchesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+     /*   let indexPath = tableView.indexPathForSelectedRow
+               
+            let match = availableMatchModels[indexPath!.row]
+               
+                  self.row = indexPath!.row
+                   
+                   //print("Row: \(indexPath!.row)")
+                
+                   self.performSegue(withIdentifier: "toJoinMatchDetailVCSegue", sender: self)*/
+ 
     }
     /*
     // Override to support conditional editing of the table view.
@@ -129,9 +139,10 @@ class JoinMatchesTableViewController: UITableViewController {
                }
     }
     
+    //method to get the matches from the main array of matches and append them to the available matches array.
+    //When there is a match model and the status indicates it is available for the hider to join, this is what method will go through all of the matches to check which ones the hider can join. 
     func getAvaliableMatches(allMatchesArray: [MatchTestModel]?) {
        
-        
         if let matches = allMatchesArray{
          for match in matches {
             //would need to check each match to see if it is available
